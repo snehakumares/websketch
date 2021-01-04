@@ -1,0 +1,863 @@
+    /* CSS HEX 
+--dark-purple: #242038ff;
+--light-pink: #f7b2b7ff;
+--beau-blue: #c7dbe6ff;
+--nickel: #626c66ff;
+--metallic-seaweed: #1f7a8cff;*/
+    
+    html {
+        font-family: 'Source Serif Pro', serif, sans-serif;
+    }    
+    body {
+        margin: 0;
+        padding: 0;
+    }    
+    .nav{
+        height:30px;
+        background-color: #242038ff;
+    }
+    .tabnav{
+        width:100vw;
+        height:75px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+      }
+    .sticky + .tabcontent {
+        padding-top: 60px;
+      }      
+    #logo{
+        height : 50px;
+        width:auto;
+        padding: 12px 0 ;
+    }
+    #logoname{
+        font-weight: bold;
+        width:5.6%;
+    }
+    .tabnav .tablink {
+        color:rgb(58, 55, 70);
+        background-color:white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 17px;
+        width: 7%;
+    }    
+    .topnav {
+        display: none;
+    }    
+    .tabnav .tablink:hover {
+        background-color:white;
+        color:rgb(58, 55, 70);
+        font-weight: bolder;
+    }    
+    .tabcontent {
+        color: white;
+        display: none;
+        padding: 40px 20px;
+        height: 100%;
+    }    
+    #Home {
+        height: 100%;
+        padding:0;
+        margin-top: 0;
+        font-family: 'Source Serif Pro', serif, sans-serif;
+    }  
+
+    .banner{
+        height:100vh;
+        background-image: url("assets/home_banner/img6.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: darken;
+        background-position: center;
+    }
+    .bannercontent{
+        width:80vw;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-top:10%;
+    }
+
+    #home1{
+        font-size: 2em;
+        height:45px;
+        animation: show 2s;
+    } 
+       
+    #home2{
+        font-size: 4.5em;
+        font-weight: 500;
+        margin-top:10px;
+        height:180px;
+        animation: show 2s;
+    }
+    #home3{
+        font-size: 1.5em;
+        height:30px;
+        display: block;
+        margin-top:50px;
+        
+    }
+
+    #home3 .line{
+        font-size: 1.25em;
+        height:50px;
+    }
+    
+    .animated-text{
+        color: #fff;
+        transform: translate(0%,-50%);
+        height: 30px;
+        overflow: hidden;
+    }
+    
+    .line:first-child{
+        animation: anim 12s infinite;
+    }
+    @keyframes show{
+        0%{
+            transform:scaleY(0);
+            transform-origin: left top;
+       }
+        100%{
+            transform:scaleY(1);
+        } 
+    }
+
+    @keyframes anim {
+        0%{
+          margin-top: 0;
+        }
+        16%{
+          margin-top: -55px;
+        }
+        33%{
+          margin-top: -105px;
+        }
+        50%{
+          margin-top: -155px;
+        }
+        66%{
+          margin-top: -105px;
+        }
+        82%{
+          margin-top: -55px;
+        }
+        100%{
+          margin-top: 0;
+        }
+      }
+    .about{
+        height:92vh;
+        color:black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15%;
+        margin-right: 15%;
+    }   
+    .about .aboutcompany{
+        margin-right: 10%;
+    }
+    .about .aboutimage img{
+        width:500px;
+        height:auto;
+        border-radius: 500%;
+    }
+    .services{
+        height:150vh;
+        position:relative;
+        background-image: url("assets/background/background1.jpg");
+        background-position-y: 7vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .services .worksofar{
+        margin:0 15%;
+        height: 15vh;
+        width: 100%;
+    }
+    .services .worksofar #item1{
+        background-image: url("assets/home_banner/img2.jfif");
+    }
+    .services .worksofar #item2{
+        background-image: url("assets/home_banner/img3.jfif");
+    }
+    .services .worksofar #item3{
+        background-image: url("assets/home_banner/img4.jpeg");
+    }
+    .services .worksofar #item4{
+        background-image: url("assets/home_banner/img5.jpg");
+    }
+    .services .worksofar .item{
+        width:13.75%;
+        margin-right:5%;
+        float: left;
+        z-index: 2;
+        height:15vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: darken;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .services .worksofar .item p{
+        font-weight: bold;
+    }
+    .services .worksofar .item:last-child{
+       margin-right: 0;
+    }
+   .serv{
+       height:100vh;
+       width:100%;
+       position:absolute;
+       top:20%;
+   }
+   .serv h4{
+       text-align: center;
+   }
+   .serv h2{
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 7vh;
+   }
+   .serv .servitems{
+        margin: 0 15%;
+        display:grid;
+        height:80%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 50% 50%;
+   }
+   .serv .servitems .servitem{
+        height:35vh;
+        width:75%;
+        justify-content: center;
+        align-content: center;
+        margin-right: 2%;
+        float:left;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        align-self: center;
+        justify-self: center;
+        transition: 1000ms;
+        transform-origin: bottom;
+   }
+   .serv .servitems .servitem:hover{
+        background-color: rgb(34, 33, 33) ;
+        color:white
+   }
+   .serv .servitems .servitem h3{
+        text-align: center;
+        margin-top:75px;
+
+    } 
+    .serv .servitems .servitem p{
+        padding:20px;
+    }
+    #Category_1 {
+        background-color: #c7dbe6ff;
+    }    
+    #Category_2 {
+        background-color: #c7dbe6ff;
+    }    
+    #Contact {
+        background-color: rgb(147, 163, 153);
+    }    
+    #About {
+        background-color: #1f7a8cff;
+    }    
+    
+    #Home #homeothers {
+        background-color: white;
+        width: 100%;
+        padding-left: 0;
+    }    
+    #Contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.25em;
+        overflow-y: hidden;
+    }    
+    #Contact .contactcontents {
+        background-color: #626c66ff;
+        margin: 15%;
+        float: left;
+        display: flex;
+        padding: 10%;
+    }    
+    #Contact .contactcontents form {
+        padding-right: 10vw;
+    }    
+    #Contact .contactcontents .contactothers {
+        text-align: center;
+        display: table;
+        height: 481.52px;
+    }    
+    #Contact .contactcontents .contactothers .others {
+        display: table-cell;
+        vertical-align: middle;
+    }    
+    #Contact .contactcontents .contactothers .others h4,
+    #Contact .contactcontents .contactothers .others h3 {
+        margin: 0;
+    }    
+    #Contact .contactcontents form div {
+        padding-bottom: 2vh;
+    }    
+    #Contact .contactcontents form div label {
+        padding-bottom: 1vh;
+    }    
+    #Contact .contactcontents form h2,
+    #Contact .contactcontents form #submit {
+        text-align: center;
+    }    
+    #Contact .contactcontents form #submit button {
+        padding: 0 3%;
+        font-size: 0.95em;
+        background-color: transparent;
+        color: white;
+        font-weight: 300;
+    }    
+    #Contact .contactcontents form #submit button h4 {
+        margin: 0;
+    }    
+    #About {
+        height: 100%;
+        overflow-y: hidden;
+        display: table;
+        font-family: 'Dancing Script', cursive;
+    }    
+    #About .aboutcontents {
+        display: table-cell;
+        vertical-align: middle;
+        color: #1b262c;
+        text-align: center;
+        width: 100vw;
+    }    
+    #About .aboutcontents div {
+        margin: 2%;
+        float: left;
+        align-items: center;
+        padding: 1vw;
+        height: auto;
+        width: 25vw;
+    }    
+    #About .aboutcontents div img {
+        width: 300px;
+        padding-top: 10px;
+        height: 234px;
+        vertical-align: middle;
+    }    
+    #About .aboutcontents div h5 {
+        margin-bottom: 0px;
+        font-size: 1.5em;
+        text-align: center;
+        color: white;
+    }    
+    #About .aboutcontents .aboutcontents1 {
+        font-family: 'Aldrich', sans-serif;
+    }    
+    #About .aboutcontents .aboutcontents1 img {
+        width: 100px;
+        margin-top: 20px;
+        height: auto;
+        border-radius: 100%;
+        background-color: white;
+    }    
+    #About .aboutcontents .aboutcontents1 div h5 {
+        margin-top: 5vh;
+        font-family: 'Aldrich', sans-serif;
+    }    
+    #Category_1 {
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+    }    
+    #Category_1 .categorycontent {
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: 30vw 30vw 30vw;
+    }    
+    #Category_1 .categorycontent .card {
+        margin-bottom: 10vh;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
+        width: 300px;
+        text-align: center;
+        font-family: arial;
+        float: left;
+        color: black;
+        justify-self: center;
+        cursor: pointer;
+    }    
+    #Category_1 .categorycontent .card img {
+        width: 70%;
+        height: 248px;
+    }    
+    #Category_1 .categorycontent .card .price {
+        color: grey;
+        font-size: 22px;
+    }    
+    #Category_1 .categorycontent .card p button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }    
+    #Category_1 .categorycontent .card p button:hover {
+        opacity: 0.7;
+    }    
+    #categorymodal {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+    }    
+    #categorymodal .categorymodalcontent {
+        width: 80vw;
+        height: 80vh;
+        background-color: white;
+    }    
+    .footer {
+        background-color: #242038ff;
+        min-height: 300px;
+        width: 100%;
+        color: white;
+    }    
+    .footer div {
+        padding: 2% 31%;
+    }    
+    .footer .contactaddress {
+        padding: 0;
+        text-align: center;
+    }    
+    .footer .contactaddress #email {
+        float: left;
+    }    
+    .footer a {
+        float: left;
+        color: white;
+        text-decoration: none;
+        padding: 0 5%;
+    }    
+    @media (max-width:424px) {
+        .nav{
+            height:30px;
+            background-color: #242038ff;
+        }
+        .tabnav {
+            display: none;
+        }
+        .topnav {
+            display: table;
+            width: 100%;
+            background-color: white;
+        }
+        .topnav a {
+            background-color:white;
+            color:rgb(58, 55, 70);
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+            background-color:white;
+            color:rgb(58, 55, 70);
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        #Home {
+            height: 100vh;
+        }
+        #Contact {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1em;
+        }
+        #Contact .contactcontents {
+            background-color: #626c66ff;
+            margin: 0;
+            float: none;
+            display: inline;
+            padding: 10%;
+        }
+        #Contact .contactcontents form {
+            padding-right: 10vw;
+            padding-left: 10vw;
+        }
+        #Contact .contactcontents .contactothers {
+            text-align: center;
+            display: table;
+            height: 200px;
+            width: 100%;
+        }
+        #About {
+            height: 100%;
+        }
+        #About .aboutcontents {
+            width: 100vw;
+        }
+        #About .aboutcontents div {
+            border-bottom: 3px solid #000;
+            float: none;
+            align-items: center;
+            height: auto;
+            width: 90%;
+            padding-bottom: 10%;
+        }
+        #About .aboutcontents div:last-child {
+            border-bottom: 0;
+        }
+        #About .aboutcontents div img {
+            padding-top: 1px;
+        }
+        #About .aboutcontents div h5 {
+            margin-bottom: 0px;
+            margin-top: 5px;
+            font-size: 1.5em;
+            text-align: center;
+            color: white;
+        }
+        #Cateogory_1 {
+            padding: 0px;
+            margin: 0;
+        }
+        #Category_1 .categorycontent {
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: 80vw;
+        }
+        #Category_1 .categorycontent .card {
+            margin-bottom: 5vh;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+            max-width: 300px;
+            float: none;
+            color: black;
+            justify-self: center;
+        }
+        #Category_1 .categorycontent .card img {
+            width: 70%;
+            height: 248px;
+        }
+        #Category_1 .categorycontent .card .price {
+            font-size: 20px;
+        }
+        #Category_1 .categorycontent .card p button {
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width:425px) and (max-width:767px) {
+        .tabnav {
+            display: none;
+        }
+        .topnav {
+            display: table;
+            width: 100%;
+            background-color: white;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            background-color:white;
+            color:rgb(58, 55, 70);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+            background-color:white;
+            color:rgb(58, 55, 70);
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        #Home {
+            height: 100vh;
+        }
+        #Contact {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1em;
+        }
+        #Contact .contactcontents {
+            background-color: #626c66ff;
+            margin: 0;
+            float: none;
+            display: inline;
+            padding: 10%;
+        }
+        #Contact .contactcontents form {
+            padding-right: 10vw;
+            padding-left: 10vw;
+        }
+        #Contact .contactcontents form #submit {
+            text-align: center;
+            align-items: center;
+            justify-self: center;
+        }
+        #Contact .contactcontents .contactothers {
+            text-align: center;
+            display: table;
+            height: 200px;
+            width: 100%;
+        }
+        #About {
+            height: 100%;
+        }
+        #About .aboutcontents {
+            width: 100vw;
+        }
+        #About .aboutcontents div {
+            border-bottom: 3px solid #000;
+            float: none;
+            align-items: center;
+            height: auto;
+            width: 90%;
+            padding-bottom: 10%;
+        }
+        #About .aboutcontents div:last-child {
+            border-bottom: 0;
+        }
+        #About .aboutcontents div img {
+            padding-top: 1px;
+        }
+        #About .aboutcontents div h5 {
+            margin-bottom: 0px;
+            margin-top: 5px;
+            font-size: 1.5em;
+            text-align: center;
+            color: white;
+        }
+        #Cateogory_1 {
+            padding: 0px;
+            margin: 0;
+        }
+        #Category_1 .categorycontent {
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: 80vw;
+        }
+        #Category_1 .categorycontent .card {
+            margin-bottom: 5vh;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+            max-width: 300px;
+            float: none;
+            color: black;
+            justify-self: center;
+        }
+        #Category_1 .categorycontent .card img {
+            width: 70%;
+            height: 248px;
+        }
+        #Category_1 .categorycontent .card .price {
+            font-size: 20px;
+        }
+        #Category_1 .categorycontent .card p button {
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width:768px) and (max-width:1023px) {
+        .tabnav {
+            display: none;
+        }
+        .topnav {
+            display: table;
+            width: 100%;
+            background-color: white;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            background-color:white;
+            color:rgb(58, 55, 70);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:not(:first-child) {
+            display: none;
+        }
+        .topnav a.icon {
+            float: right;
+            display: block;
+            background-color:white;
+            color:rgb(58, 55, 70);
+        }
+        .topnav.responsive {
+            position: relative;
+        }
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        #Home {
+            height: 100vh;
+        }
+        #Contact {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1em;
+        }
+        #Contact .contactcontents {
+            background-color: #626c66ff;
+            margin: 0;
+            float: none;
+            display: inline;
+            padding: 10%;
+        }
+        #Contact .contactcontents form {
+            padding-right: 10vw;
+            padding-left: 10vw;
+        }
+        #Contact .contactcontents form #submit {
+            text-align: center;
+            align-items: center;
+            justify-self: center;
+        }
+        #Contact .contactcontents .contactothers {
+            text-align: center;
+            display: table;
+            height: 200px;
+            width: 100%;
+        }
+        #About {
+            height: 100%;
+        }
+        #About .aboutcontents {
+            width: 100vw;
+        }
+        #About .aboutcontents div {
+            border-bottom: 3px solid #000;
+            float: none;
+            align-items: center;
+            height: auto;
+            width: 90%;
+            padding-bottom: 10%;
+        }
+        #About .aboutcontents div:last-child {
+            border-bottom: 0;
+        }
+        #About .aboutcontents div img {
+            padding-top: 1px;
+        }
+        #About .aboutcontents div h5 {
+            margin-bottom: 0px;
+            margin-top: 5px;
+            font-size: 1.5em;
+            text-align: center;
+            color: white;
+        }
+        #Cateogory_1 {
+            padding: 0px;
+            margin: 0;
+        }
+        #Category_1 .categorycontent {
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: 80vw;
+        }
+        #Category_1 .categorycontent .card {
+            margin-bottom: 5vh;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+            max-width: 300px;
+            float: none;
+            color: black;
+            justify-self: center;
+        }
+        #Category_1 .categorycontent .card img {
+            width: 70%;
+            height: 248px;
+        }
+        #Category_1 .categorycontent .card .price {
+            font-size: 20px;
+        }
+        #Category_1 .categorycontent .card p button {
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+    
+    @media (min-width:1024px) and (max-width:1439px) {
+    }
+    
+    @media (min-width:1440px) {
+    }

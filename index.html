@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Epoch Zero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="navcontent">
+        </div>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a id="show">Home</a>
+        <a onclick="openPage('Home','topnav', 'Home')" class="active" id="defaultOpen">HOME</a>
+        <a onclick="openPage('Category_1','topnav','Kids')">Kids</a>
+        <a onclick="openPage('Category_1','topnav','Household')">Household</a>
+        <a onclick="openPage('Contact','topnav','Contact Us')">Contact Us</a>
+        <a onclick="openPage('About','topnav','About Us')">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="tabnav" id="myTabnav">
+        <img src="assets/Logo.jpeg" class="tablink" id="logo">
+        <button class="tablink" id="logoname">Epoch Zero</button>
+        <button class="tablink" onclick="openPage('Home','tabnav')" id="defaultOpen">HOME</button>
+        <button class="tablink" onclick="openPage('Category_1','tabnav')">Kids</button>
+        <button class="tablink" onclick="openPage('Category_1','tabnav')">Household</button>
+        <button class="tablink" onclick="openPage('Contact','tabnav')">Contact Us</button>
+        <button class="tablink" onclick="openPage('About','tabnav')">About Us</button>
+    </div>
+
+
+    <div id="Home" class="tabcontent">
+        <div class="banner">
+            <div class="bannercontent">
+                <p id="home1">Software Solution Startup
+                </p>
+                <p id="home2">Seamless Connection - Round the Globe<br>Choice for a Lifetime
+                </p>
+                <div id="home3">
+                    <div class="animated-text">
+                        <div class="line">7+ Years of Experience</div>
+                        <div class="line">200+ Projects</div>
+                        <div class="line">100+ Clients</div>
+                        <div class="line">80+ Offshore Work Commitments</div>
+                      </div>
+                 <!--https://www.youtube.com/watch?v=rK9nDoaswRU&feature=emb_logo-->
+                    </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutcompany">
+                <h3>
+                    About the company
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <h3>
+                    Mission
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+                <h3>
+                    Vision
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            <div class="aboutimage">
+                <img src="assets/home_banner/img2.jfif">
+            </div>
+        </div>
+        <div class="services">
+            <div class="worksofar">
+                <div class="item" id="item1">
+                    <p>7+ Years of Experience</p>   
+                </div>
+                <div class="item" id="item2">
+                    <p>200+ Projects</p>  
+                </div>
+                <div class="item" id="item3">
+                    <p>100+ Clients</p>
+                </div>
+                <div class="item" id="item4">
+                    <p>80+ Offshore Work Commitments</p>
+                </div>
+            </div>
+            <div class="serv">
+                <h4>WHO WE ARE</h4>
+                <h2>We deal with the aspects of<br>professional IT Services</h2>
+                <div class="servitems">
+                    <div class="servitem">
+                        <h3> Cloud Services</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>UI/UX Design</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>Web Development</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>Application Development</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+
+                    <div class="servitem">
+                        <h3>Maintenance and Support Services</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>Software Development</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>Digital Marketing</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                    <div class="servitem">
+                        <h3>E-commerce Development</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div id="Category_1" class="tabcontent">
+        <div class="categorycontent">
+            <div class="card">
+                <img src="assets/category1/tanvi-international-singing-and-dancing-minion-original-imaejv3s7mgzxaba.jpeg">
+                <h3>Tanvy International Singing And Dancing Minion</h3>
+                <p class="price">₹395</p>
+                <p>Battery operated signing and dancing minion</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="card">
+                <img src="assets/category1/37-key-piano-keyboard-toy-for-kids-with-mic-dc-power-option-original-imafnymr75hwwkwd.jpeg">
+                <h3>Piano Keyboard Toy <br>Multi-colored</h3>
+                <p class="price">₹625</p>
+                <p>37 Key Piano Keyboard Toy for Kids with Mic Dc Power Option Recording Charger </p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="card">
+                <img src="assets/category1/sing-along-dancing-rotating-fairy-with-blossoming-petal-skirt-original-imafhby8ysyayb5y.jpeg">
+                <h3>Miss & Chief Musical Bump and Go Dancing Princess Fairy</h3>
+                <p class=" price">₹554</p>
+                <p>Sing along dancing,rotating fairy with blossoming petal skirt</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="card">
+                <img src="assets/category1/gift-world-drum-keyboard-musical-toys-with-flashing-lights-original-imaemtyjtanzwkdn.jpeg">
+                <h3>World Drum Keyboard Musical Toys</h3>
+                <p class="price">₹485</p>
+                <p>Gift World Drum Keyboard Musical Toys With Flashing Lights</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="card">
+                <img src="assets/category1/penquin-race-track-set-miss-chief-original-imafk4zyfrfzwrr5.jpeg">
+                <h3>Miss & Chief Penguin Race Track Set</h3>
+                <p class="price">₹625</p>
+                <p>The Miss & Chief Race Track Set features 3 toys on a track who race each other</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+            <div class="card">
+                <img src="assets/category1/battery-operated-fantastic-jumping-walking-barking-jumping-puppy-original-imafzgzrwkqbzz9w.jpeg">
+                <h3>Fantastic Puppy<br>Multi-colored</h3>
+                <p class="price">₹625</p>
+                <p>37 Key Piano Keyboard Toy for Kids with Mic Dc Power Option Recording Charger </p>
+                <p><button>Add to Cart</button></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="Category_2" class="tabcontent">
+        <h2>Category 2</h2>
+        <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <div class="contactcontents">
+            <div class="form">
+                <form>
+                    <h2>Submit your query here</h2>
+                    <div>
+                        <label for="name">Name<br></label>
+                        <input type="text" placeholder="Name" name="name" size="40px" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Id<br></label>
+                        <input type="email" placeholder="Email " name="email" size="40px" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone<br></label>
+                        <input type="text" placeholder="Phone " name="phone" size="40px" required>
+                    </div>
+                    <div>
+                        <label for="query ">Query<br></label>
+                        <textarea type="text" placeholder="Query" name="query" rows="4" cols="43" required></textarea>
+                    </div>
+                    <div id="submit">
+                        <button type="submit" value="submit"><h4>Submit</h4></button>
+                    </div>
+                </form>
+            </div>
+            <div class="contactothers">
+                <div class="others">
+                    <h2>Contact Us</h2>
+                    <h4>9876543210</h4>
+                    <h4>mywebmart@gmail.com</h4>
+                    <h4>helpline@webmart.com</h4>
+                    <h4>query@webmart.com</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <div class="aboutcontents ">
+            <div>
+                <img src="assets/about/shoptohome.png">
+                <h5>We started our journey in 2007. Now the most trusted online shopping mart. We always try to improve ourself to serve you. We bring shop to your home.<br> Stay home! Stay safe!.
+                </h5>
+            </div>
+            <div>
+                <img src="assets/about/easybuying.png">
+                <h5>We provide thousands of products in your finger tip with fast delivery of products with less shipping charge. You will be always happy with us.<br> Try once. You won't get disappointed.
+                </h5>
+            </div>
+            <div>
+                <img src="assets/about/openalways.png">
+                <h5>Best services offered 24x7. Any queries? Submit in our "Contact Us " page, you will get our reply within 24 hours. Our service and our happy customers made us stand unique.<br>Be the next to enjoy our service</h5>
+            </div>
+            <div class="aboutcontents1">
+                <img src="assets/about/profile.png">
+                <h5>Sushant<br>CEO
+                </h5>
+            </div>
+            <div class="aboutcontents1 ">
+                <img src="assets/about/profile.png">
+                <h5>Anil<br>Technical Business Developer
+                </h5>
+            </div>
+            <div class="aboutcontents1 ">
+                <img src="assets/about/profile.png">
+                <h5>Madhav<br>Software Developer
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="footer">
+        <div>
+            <a onclick="openPage('Home','topnav', 'Home')" class="active" id="defaultOpen">Home</a>
+            <a onclick="openPage('Category_1','topnav','Kids')">Kids</a>
+            <a onclick="openPage('Category_1','topnav','Household')">Household</a>
+            <a onclick="openPage('Contact','topnav','Contact Us')">Contact Us</a>
+            <a onclick="openPage('About','topnav','About Us')">About Us</a>
+        </div>
+        <div class="contactaddress">
+            Contact Us @
+        </div>
+        <div class="contactaddress">
+            <p>9876543210</p>
+        </div>
+        <div class="contactaddress" id="email">
+            <p>mywebmart@gmail.com</p>
+            <p>helpline@webmart.com</p>
+            <p>query@webmart.com</p>
+        </div>
+    </div>
+-->
+    <script src="script.js" async defer></script>
+</body>
+
+</html>
