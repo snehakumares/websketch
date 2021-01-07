@@ -15,7 +15,7 @@
         overflow-x: hidden;
     }    
     .nav{
-        height:30px;
+        height:50px;
         background-color: #242038ff;
     }
     .tabnav{
@@ -39,7 +39,7 @@
     }
     #logoname{
         font-weight: bold;
-        width:5.6%;
+        min-width:7%;
     }
     .tabnav .tablink {
         color:rgb(58, 55, 70);
@@ -49,7 +49,8 @@
         outline: none;
         cursor: pointer;
         font-size: 17px;
-        width: 7%;
+        min-width: 4%;
+        padding:0 20px;
     }    
     .topnav {
         display: none;
@@ -57,6 +58,7 @@
     .tabnav .tablink:hover {
         background-color:white;
         color:rgb(58, 55, 70);
+        cursor: pointer;
         font-weight: bolder;
     }    
     .tabcontent {
@@ -65,6 +67,9 @@
         padding: 40px 20px;
         height: 100%;
     }    
+    .topnav a{
+        cursor: pointer;
+    }
     #Home {
         height: 100%;
         padding:0;
@@ -378,7 +383,7 @@
     .check2{
         margin-top:5%;
         height:200px;
-        width:100%;
+        width:100p;
         color:black;
         font-size: 1.25em;
         display: flex;
@@ -406,126 +411,46 @@
       }
     .footer{
         height:58vh;
-        width:100%;
+        width:100vw;
         background-color: rgb(165, 160, 160);
+        padding:0 15%;
+        display: grid;
+        grid-template-columns: 25% 30% 10%;
     }
-    #Category_1 {
-        background-color: #c7dbe6ff;
-    }    
-    #Category_2 {
-        background-color: #c7dbe6ff;
-    }    
-    #Contact {
-        background-color: rgb(147, 163, 153);
-    }    
-    #About {
-        background-color: #1f7a8cff;
-    }    
-    
-    #Home #homeothers {
-        background-color: white;
-        width: 100%;
-        padding-left: 0;
-    }    
-    #Contact {
-        display: flex;
+    .footer .footercontents{
         justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-size: 1.25em;
-        overflow-y: hidden;
-    }    
-    #Contact .contactcontents {
-        background-color: #626c66ff;
-        margin: 15%;
-        float: left;
-        display: flex;
-        padding: 10%;
-    }    
-    #Contact .contactcontents form {
-        padding-right: 10vw;
-    }    
-    #Contact .contactcontents .contactothers {
-        text-align: center;
-        display: table;
-        height: 481.52px;
-    }    
-    #Contact .contactcontents .contactothers .others {
-        display: table-cell;
-        vertical-align: middle;
-    }    
-    #Contact .contactcontents .contactothers .others h4,
-    #Contact .contactcontents .contactothers .others h3 {
-        margin: 0;
-    }    
-    #Contact .contactcontents form div {
-        padding-bottom: 2vh;
-    }    
-    #Contact .contactcontents form div label {
-        padding-bottom: 1vh;
-    }    
-    #Contact .contactcontents form h2,
-    #Contact .contactcontents form #submit {
-        text-align: center;
-    }    
-    #Contact .contactcontents form #submit button {
-        padding: 0 3%;
-        font-size: 0.95em;
-        background-color: transparent;
-        color: white;
-        font-weight: 300;
-    }    
-    #Contact .contactcontents form #submit button h4 {
-        margin: 0;
-    }    
-    #About {
-        height: 100%;
-        overflow-y: hidden;
-        display: table;
-        font-family: 'Dancing Script', cursive;
-    }    
-    #About .aboutcontents {
-        display: table-cell;
-        vertical-align: middle;
-        color: #1b262c;
-        text-align: center;
-        width: 100vw;
-    }    
-    #About .aboutcontents div {
-        margin: 2%;
-        float: left;
-        align-items: center;
-        padding: 1vw;
+        align-self: center;
+        justify-self: center;
+    }
+    .footer .footercontents p{
+        margin:10px 0;
+    }
+    .footer .footercontents .abt{
+        display:grid;
+        grid-template-columns: 20% 80%;
+        justify-content: center;
+        align-content: center;
+    }
+    .footer .footercontents .abt p{
+        font-size: 2em;
+    }
+    .footer .footercontents img{
+        margin-right: 15px;
+        width:27px;
         height: auto;
-        width: 25vw;
-    }    
-    #About .aboutcontents div img {
-        width: 300px;
-        padding-top: 10px;
-        height: 234px;
-        vertical-align: middle;
-    }    
-    #About .aboutcontents div h5 {
-        margin-bottom: 0px;
-        font-size: 1.5em;
-        text-align: center;
-        color: white;
-    }    
-    #About .aboutcontents .aboutcontents1 {
-        font-family: 'Aldrich', sans-serif;
-    }    
-    #About .aboutcontents .aboutcontents1 img {
-        width: 100px;
-        margin-top: 20px;
-        height: auto;
-        border-radius: 100%;
-        background-color: white;
-    }    
-    #About .aboutcontents .aboutcontents1 div h5 {
-        margin-top: 5vh;
-        font-family: 'Aldrich', sans-serif;
-    }    
-    #Category_1 {
+        margin-top:5px;
+    }
+    .footer .footercontents .abt img{
+        width:70%;
+        height:auto;
+        align-self: center;
+    }
+    .footer .footercontents .footercontact{
+        display: grid;
+        grid-template-columns: 13% 87%;
+        align-items: center;
+    }  
+    #Key_Projects {
         height: 100%;
         overflow: hidden;
         display: flex;
@@ -534,55 +459,183 @@
         margin: 0;
         width: 100vw;
     }    
-    #Category_1 .categorycontent {
-        margin-top: 10vh;
+    #Key_Projects .heading{
+        height:30vh;
+        background-color: black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+    #Key_Projects .keyprojectscontents {
+        margin:10vh 20%;
         display: grid;
-        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-columns: 50% 50%;
     }    
-    #Category_1 .categorycontent .card {
+    #Key_Projects .keyprojectscontents .card {
         margin-bottom: 10vh;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         background-color: white;
-        width: 300px;
+        width: 85%;
         text-align: center;
         font-family: arial;
         float: left;
         color: black;
         justify-self: center;
-        cursor: pointer;
+        height:500px;
     }    
-    #Category_1 .categorycontent .card img {
-        width: 70%;
+    #Key_Projects .keyprojectscontents .card img {
+        width: 100%;
         height: 248px;
     }    
-    #Category_1 .categorycontent .card .price {
-        color: grey;
-        font-size: 22px;
-    }    
-    #Category_1 .categorycontent .card p button {
-        border: none;
-        outline: 0;
-        padding: 12px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }    
-    #Category_1 .categorycontent .card p button:hover {
-        opacity: 0.7;
-    }    
-    #categorymodal {
-        display: none;
+    #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
+        text-align: left;
+        padding:10px;
+    }
+    #Client{
+        height: 100%;
+        padding: 0;
+        margin: 0;
         width: 100vw;
-        height: 100vh;
-    }    
-    #categorymodal .categorymodalcontent {
-        width: 80vw;
-        height: 80vh;
+    }
+    #Client .clientheading{
+        height:40vh;
+        background-color: black;
+        font-size: 2em;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #Client .clientheading .head1{
+        text-align: center;
+    }
+    #Client .clientcontents{
+        width:70%;
+        height:40vh;
+        margin:2% 15%;
+        display:grid;
+        grid-template-columns: 5% 90% 5%;
+        justify-items: center;
+        align-items: center;
+    }
+    #Client .clientcontents .clientul{
+        padding:0;
+        color:black;
+        margin: 0;
+    }
+    #Client .clientcontents .prev1,#Client .clientcontents .next1{
+        color: black;
+        box-shadow: 0;
+        border-radius: 100%;
+        outline: 0;
+        border: 0;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+    #Client .clientcontents .clientul .clientSlides{
+        display: flex;
+        height:100%;
+    }
+    #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
+        margin:20px 20px;
+        padding:20px 20px;
         background-color: white;
+        box-shadow: 0px 0px 10px gray;
+    }
+    #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
+        text-align: center;
+    }
+    .doublequotes{
+        font-size: 1.5em;
+    }
+    #Careers{
+        height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+        margin: 0;
+        padding:0;
     }    
+    #Careers .careerheading{
+        height:20vh;
+        background-color: black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+    #Careers .careerscontents {
+        background-color: #626c66ff;
+        margin: 0 15%;
+        display: flex;
+        height:80vh;
+        justify-content: center;
+        align-items: center;
+    }
+    #Careers .careerscontents form{
+        width: 100%;
+    }    
+    #Careers .careerscontents form input,#Careers .careerscontents form select{
+        width:100%;
+        font-size: 1em;
+        padding:10px;
+    }       
+    #Careers .careerscontents form div {
+        padding-bottom: 2vh;
+    }    
+    #Careers .careerscontents form div label {
+        padding-bottom: 1vh;
+    }    
+    #Careers .careerscontents form h2,
+    #Careers .careerscontents form #submit {
+        text-align: center;
+    }    
+    #Careers .careerscontents form #submit button {
+        padding: 0 3%;
+        font-size: 0.95em;
+        background-color: transparent;
+        color: white;
+        font-weight: 300;
+    }    
+    #Careers .careerscontents form #submit button h4 {
+        margin: 0;
+    }   
+    #Contact{
+        height: 100%;
+        overflow-y: hidden;
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }    
+    #Contact .contactheading{
+        height:20vh;
+        background-color: black;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+    #Contact .contactcontents{
+        margin:0 30%;
+        height:30vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #Contact .contactcontents .contactitem{
+        box-shadow: 0 0 30px rgb(201, 196, 196);
+        color:black;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        height: 30%;
+        justify-items: center;
+        align-content: center;
+        justify-self: center;
+        align-self: center;
+    }
+    #Contact .contactcontents .contactitem .contacticon{
+        align-self: center;
+    }
     @media (max-width:424px) {
         .nav{
             height:30px;
@@ -683,16 +736,16 @@
             text-align: center;
             color: white;
         }
-        #Cateogory_1 {
+        #Key_Projects {
             padding: 0px;
             margin: 0;
         }
-        #Category_1 .categorycontent {
+        #Key_Projects .keyprojectscontents {
             margin-top: 5vh;
             display: grid;
             grid-template-columns: 80vw;
         }
-        #Category_1 .categorycontent .card {
+        #Key_Projects .keyprojectscontents .card {
             margin-bottom: 5vh;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             background-color: white;
@@ -701,16 +754,9 @@
             color: black;
             justify-self: center;
         }
-        #Category_1 .categorycontent .card img {
+        #Key_Projects .keyprojectscontents .card img {
             width: 70%;
             height: 248px;
-        }
-        #Category_1 .categorycontent .card .price {
-            font-size: 20px;
-        }
-        #Category_1 .categorycontent .card p button {
-            width: 100%;
-            font-size: 15px;
         }
     }
     
@@ -815,16 +861,16 @@
             text-align: center;
             color: white;
         }
-        #Cateogory_1 {
+        #Key_Projects {
             padding: 0px;
             margin: 0;
         }
-        #Category_1 .categorycontent {
+        #Key_Projects .keyprojectscontents {
             margin-top: 5vh;
             display: grid;
             grid-template-columns: 80vw;
         }
-        #Category_1 .categorycontent .card {
+        #Key_Projects .keyprojectscontents .card {
             margin-bottom: 5vh;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             background-color: white;
@@ -833,16 +879,9 @@
             color: black;
             justify-self: center;
         }
-        #Category_1 .categorycontent .card img {
+        #Key_Projects .keyprojectscontents .card img {
             width: 70%;
             height: 248px;
-        }
-        #Category_1 .categorycontent .card .price {
-            font-size: 20px;
-        }
-        #Category_1 .categorycontent .card p button {
-            width: 100%;
-            font-size: 15px;
         }
     }
     
@@ -947,16 +986,16 @@
             text-align: center;
             color: white;
         }
-        #Cateogory_1 {
+        #Key_Projects {
             padding: 0px;
             margin: 0;
         }
-        #Category_1 .categorycontent {
+        #Key_Projects .keyprojectscontents {
             margin-top: 5vh;
             display: grid;
             grid-template-columns: 80vw;
         }
-        #Category_1 .categorycontent .card {
+        #Key_Projects .keyprojectscontents .card {
             margin-bottom: 5vh;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             background-color: white;
@@ -965,16 +1004,9 @@
             color: black;
             justify-self: center;
         }
-        #Category_1 .categorycontent .card img {
+        #Key_Projects .keyprojectscontents .card img {
             width: 70%;
             height: 248px;
-        }
-        #Category_1 .categorycontent .card .price {
-            font-size: 20px;
-        }
-        #Category_1 .categorycontent .card p button {
-            width: 100%;
-            font-size: 15px;
         }
     }
     
