@@ -5,12 +5,9 @@
     <title>Epoch Zero</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Srisakdi:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -30,13 +27,13 @@
         </a>
     </div>
     <div class="tabnav" id="myTabnav">
-        <img src="assets/Logo.jpeg" class="tablink" id="logo">
-        <button class="tablink" id="logoname">Epoch Zero</button>
-        <button class="tablink" onclick="openPage('Home','tabnav')" id="defaultOpen">HOME</button>
-        <button class="tablink" onclick="openPage('Key_Projects','tabnav')">KEY PROJECTS</button>
-        <button class="tablink" onclick="openPage('Client','tabnav')">CLIENT TESTIMONIAL</button>
-        <button class="tablink" onclick="openPage('Careers','tabnav')">CAREERS</button>
-        <button class="tablink" onclick="openPage('Contact','tabnav')">CONTACT US</button>
+        <img src="assets/Logowhite.png" class="tablink" id="logo">
+        <img src="assets/logowhite1.png" class="tablink" id="logoname">
+        <a class="tablink" onclick="openPage('Home','tabnav')" id="defaultOpen">HOME</a>
+        <a class="tablink" onclick="openPage('Key_Projects','tabnav')">KEY PROJECTS</a>
+        <a class="tablink" onclick="openPage('Client','tabnav')">CLIENT TESTIMONIAL</a>
+        <a class="tablink" onclick="openPage('Careers','tabnav')">CAREERS</a>
+        <a class="tablink" onclick="openPage('Contact','tabnav')">CONTACT US</a>
     </div>
 
 
@@ -80,7 +77,7 @@
                 </p>
             </div>
             <div class="aboutimage">
-                <img src="assets/home_banner/img2.jfif">
+                <img src="assets/home_banner/img3.jfif">
             </div>
         </div>
         <div class="serv_proj">
@@ -140,32 +137,34 @@
                 </div>
             </div>
             <div class="projects">
-                <div class="head">
-                    <h2>Our Projects</h2>
-                    <div class="check">
-                        <p>Check out our <button>Latest Work <span style="font-size: small;">&#10095;</span></button></p>
-                     </div>
-                </div>
-                <div class="projectContents">
-                    <ul class="projectul">
-                        <li class="mySlides">
-                            <h3>Project One</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                        </li>
-                        <li class="mySlides">
-                            <h3>Project Two</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                </p>
-                        </li>
-                    </ul>
-                    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                    <button class="next" onclick="plusSlides(1)">&#10095;</button>
-                
+                <div class="projectitems">
+                    <div class="head">
+                        <h2>Our Projects</h2>
+                        <div class="check">
+                            <p><a onclick="openPage('Key_Projects','tabnav')">Check out our Latest Work</a></p>
+                        </div>
+                    </div>
+                    <div class="projectContents">
+                        <ul class="projectul">
+                            <li class="mySlides">
+                                <h3>Project One</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                            </li>
+                            <li class="mySlides">
+                                <h3>Project Two</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                            </li>
+                        </ul>
+                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                    
+                    </div>
                 </div>
             </div>
         </div>
          <div class="check1">
-            <p><a href="#">Read the musing of our TechHub Community</a></p>
+            <p><br><a onclick="openPage('Errorpage','tabnav')" target="_blank"><button>Read the musing of our TechHub Community</button></a></p>
         </div>
         <div class="check2">
             <p> Are We Liked? Check out what our clients are sayings <button>Our Clients <span style="font-size: small;">&#10095;</span></button></p>
@@ -351,7 +350,6 @@
         <div class="careerscontents">
             <div class="form">
                 <form>
-                    <h2>Submit your query here</h2>
                     <div>
                         <label for="name">Full name<br></label>
                         <input type="text" placeholder="Name" name="name" size="40px" required>
@@ -432,6 +430,35 @@
                 </div>
             </div>
         </div>
+        <div class="enquiry">
+            <button id="enquiryclick">Have some query?</button>
+        </div>
+        <div class="modal" id="query">
+            <div class="modalcontent">
+                <span class="close" id="closequery">x</span>
+                <br>
+                <div class="modalitems">
+                    <form>
+                        <div>
+                            <label for="name">Name<br></label>
+                            <input type="text" name="name" size="30px">
+                        </div>
+                        <div>
+                            <label for="email">Email<br></label>
+                            <input type="text" name="email" size="30px" required>
+                        </div>
+                        
+                        <div>
+                            <label for="querymessage">Message<br></label>
+                            <textarea required></textarea>
+                        </div>
+                        <div class="submitbutton">
+                            <button type="submit" value="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="footercontents">
                <div class="abt">
@@ -457,6 +484,10 @@
                 <a>>>Contact Us</a><br>
             </div>
        </div>
+    </div>
+    <div id="Errorpage" class="tabcontent">
+        <h1>404</h1>
+        <h3>Page Not Found</h3>
     </div>
 
     <script src="script.js" async defer></script>
