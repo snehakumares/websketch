@@ -6,7 +6,7 @@
 --metallic-seaweed: #1f7a8cff;*/
     
     html {
-        font-family: 'Source Serif Pro', serif, sans-serif;
+        font-family: 'Roboto Mono', monospace;
     }    
     body {
         margin: 0;
@@ -15,15 +15,16 @@
         overflow-x: hidden;
     }    
     .nav{
-        height:50px;
-        background-color: #242038ff;
+        height:0px;
+        background-color: black;
     }
     .tabnav{
         width:100vw;
         height:75px;
-        background-color: white;
+        background-color: black;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .sticky {
         position: fixed;
@@ -32,35 +33,60 @@
     .sticky + .tabcontent {
         padding-top: 60px;
       }      
-    #logo{
-        height : 50px;
-        width:auto;
-        padding: 12px 0 ;
-    }
-    #logoname{
-        font-weight: bold;
-        min-width:7%;
-    }
     .tabnav .tablink {
-        color:rgb(58, 55, 70);
-        background-color:white;
+        color:white;
+        background-color:black;
         float: left;
         border: none;
         outline: none;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 15px;
         min-width: 4%;
+        font-weight: 500;
         padding:0 20px;
+        letter-spacing:.15em;
+        text-decoration: none;
+        height: fit-content;
+        position: relative;
+        text-align: center;
+    }  
+    .tabnav .tablink:after{
+        bottom:0;
+        content:"";
+        height:2px;
+        left:0%;
+        position:absolute;
+        top:30px;
+        background:white;
+        transition:width .3s ease 0s,left .3s ease 0s;
+        width:0;
+    }
+    .tabnav .tablink:hover:after{
+        width: 100%;
+        left:0;
     }    
     .topnav {
         display: none;
     }    
     .tabnav .tablink:hover {
-        background-color:white;
-        color:rgb(58, 55, 70);
         cursor: pointer;
-        font-weight: bolder;
-    }    
+    }  
+    #logo{
+        height : 50px;
+        width:auto;
+        padding: 12px 0;
+    }
+    #logoname{  
+        padding: 0;
+        min-width:5%;
+    }
+    #logoname{
+        height:30px;
+        padding: 0 20px 0 0;
+    }
+    #logoname:hover{
+        cursor: default;
+    }  
     .tabcontent {
         color: white;
         display: none;
@@ -74,7 +100,6 @@
         height: 100%;
         padding:0;
         margin-top: 0;
-        font-family: 'Source Serif Pro', serif, sans-serif;
     }  
 
     .banner{
@@ -85,26 +110,28 @@
         background-color: rgba(0, 0, 0, 0.5);
         background-blend-mode: darken;
         background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .bannercontent{
         width:80vw;
         margin-left: 15%;
         margin-right: 15%;
-        padding-top:10%;
     }
 
     #home1{
         font-size: 2em;
         height:45px;
-        animation: show 2s;
+        animation: show 1s;
     } 
        
     #home2{
-        font-size: 4.5em;
+        font-size: 3em;
         font-weight: 500;
         margin-top:10px;
         height:180px;
-        animation: show 2s;
+        animation: show 1s;
     }
     #home3{
         font-size: 1.5em;
@@ -172,11 +199,14 @@
         margin-right: 15%;
     }   
     .about .aboutcompany{
-        margin-right: 10%;
+        margin-right: 15%;
+    }
+    .about .aboutcompany h3{
+        font-size: 1.5em;
     }
     .about .aboutimage img{
-        width:500px;
-        height:auto;
+        width:300px;
+        height:300px;
         border-radius: 500%;
     }
     .serv_proj{
@@ -184,9 +214,9 @@
         position:relative;
     }
     .services{
-        height:148vh;
+        height:155vh;
         position:relative;
-        background:linear-gradient( white 0.5%,rgb(32, 31, 31) 0.5%);
+        background:linear-gradient( white 0.5%,rgb(43, 42, 42) 0.5%);
         background-position-y: 7vh;
         background-repeat: no-repeat;
         background-size: cover;
@@ -216,11 +246,12 @@
         height:15vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         background-blend-mode: darken;
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
     .services .worksofar .item p{
         font-weight: bold;
@@ -232,10 +263,11 @@
        height:100vh;
        width:100%;
        position:absolute;
-       top:15%;
+       top:12%;
    }
    .serv h4{
        text-align: center;
+       font-size: 1.75em;
    }
    .serv h2{
         font-size: 3em;
@@ -258,24 +290,28 @@
         float:left;
         background-color: white;
         color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         border-radius: 10px;
         align-self: center;
         justify-self: center;
-        transition: 1000ms;
         transform-origin: bottom;
+        box-shadow: 0 0 5px black;
    }
    .serv .servitems .servitem:hover{
         background-color: rgb(34, 33, 33) ;
+        background:linear-gradient(rgb(43, 42, 42) 5%,rgb(43, 42, 42) 10%,#3f3f3f,#707070);
         color:white;
-        box-shadow: 2px 2px 5px black;
    }
    .serv .servitems .servitem h3{
         text-align: center;
-        margin-top:75px;
-
+        padding:0 10px;
     } 
     .serv .servitems .servitem p{
         padding:20px;
+        font-size: 0.75em;
     }
     .projects{
         height:50vh;
@@ -284,24 +320,31 @@
         text-align: center;
         padding:0;
         position: absolute;
-        top:73%;
+        top:75%;
         left:0%;
         border-radius: 25px;
         background-image: url("assets/home_banner/img5.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         background-blend-mode: darken;
-        display:grid;
-        grid-template-columns: 30% 65% 5%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    .projects .head h2{
+    .projects .projectitems{
+        display:grid;
+        grid-template-columns: 35% 70%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 95%;
+    }
+    .projects .projectitems .head h2{
         margin:0;
         font-size: 2em;
     }
-    .projects .projectContents{
+    .projects .projectitems .projectContents{
         height:100%;
         width:100%;
         position: relative;
@@ -309,28 +352,32 @@
         justify-content: center;
         align-items: center;
     }
-    .projects .projectContents .projectul{
+    .projects .projectitems .projectContents .projectul{
         padding:0;
         color:white;
         position: absolute;
-        width:50%;
-        font-size: 1.5em;
+        width:70%;
+        font-size: 1em;
     }
-    .projects .projectContents .prev,.projects .projectContents .next{
+    .projects .projectitems .projectContents .projectul .mySlides h3{
+        font-size: 1.25em;
+    }
+    .projects .projectitems .projectContents .prev,.projects .projectContents .next{
         position:absolute;
         top:50%;
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         box-shadow: 0;
-        border-radius: 100%;
         outline: 0;
         border: 0;
+        padding:10px;
+        box-shadow: 0 0 1px gray;
     }
-    .projects .projectContents .prev{
-        left:9%;
+    .projects .projectitems .projectContents .prev{
+        left:7%;
     }
-    .projects .projectContents .next{
-        right:9%;
+    .projects .projectitems .projectContents .next{
+        right:7%;
     }
     .check{
         margin-top:5%;
@@ -342,22 +389,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
-    .check p button{
-        padding:5px;
-        font-size:0.75em;
+    .check p:hover{
+        cursor: pointer;
+    }
+    .check p a:after{
+        bottom:0;
+        content:"";
+        display:block;
+        height:3px;
+        left:15%;
+        position:absolute;
+        background:white;
+        transition:width .3s ease 0s,left .3s ease 0s;width:0
+    }
+    .check p a:hover:after{
+        width:70%;
+        left:15%;
+    }
+    .check1 p a button{
+        padding:8px 40px;
         border:0;
-        box-shadow: 0;
+        font-size: 1em;
         color: white;
         outline: 0;
-        background: linear-gradient(105deg, gray 45%, black 45%);
+        background: linear-gradient(115deg, black 47%, rgb(56, 54, 54) 47%);
         background-size: 200% 100%;
         background-position: left bottom;
         transition: all .5s ease-out;
-        box-shadow: 3px 3px 4px gray;
-        margin-left:10px;
+        box-shadow: 0px 0px 4px gray;
+        border-radius: 3px;
+        font-family: 'Roboto Mono', monospace;
+        align-items: center;
     }
-    .check p button:hover {
+    .check1 p a button:hover {
         background-position: right bottom;
         cursor: pointer;
       }
@@ -376,10 +442,6 @@
         color: black;
         transition: all .5s ease-out;
     }
-    .check1 p a:hover{
-        cursor: pointer;
-        border-bottom: 2px black solid;
-    }
     .check2{
         margin-top:5%;
         height:200px;
@@ -389,7 +451,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(56, 52, 52);
     }
     .check2 p button{
         padding:5px;
@@ -409,6 +470,23 @@
         background-position: right bottom;
         cursor: pointer;
       }
+    #Errorpage{
+        height:95vh;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        flex-direction: column;
+    }
+    #Errorpage h1{
+        font-size: 5em;
+        margin:0;
+    }
+    #Errorpage h3{
+        font-size: 3em;
+        margin: 0;
+    }
     .footer{
         height:58vh;
         width:100vw;
@@ -477,7 +555,6 @@
         background-color: white;
         width: 85%;
         text-align: center;
-        font-family: arial;
         float: left;
         color: black;
         justify-self: center;
@@ -575,24 +652,28 @@
     #Careers .careerscontents form{
         width: 100%;
     }    
-    #Careers .careerscontents form input,#Careers .careerscontents form select{
+    #Careers .careerscontents form select{
         width:100%;
         font-size: 1em;
         padding:10px;
-    }       
+    } 
+    #Careers .careerscontents form input{
+        width: 94%;
+        font-size: 1em;
+        padding:10px;
+    }      
     #Careers .careerscontents form div {
         padding-bottom: 2vh;
     }    
     #Careers .careerscontents form div label {
         padding-bottom: 1vh;
     }    
-    #Careers .careerscontents form h2,
     #Careers .careerscontents form #submit {
         text-align: center;
     }    
     #Careers .careerscontents form #submit button {
-        padding: 0 3%;
-        font-size: 0.95em;
+        padding: 2% 3%;
+        font-size: 1em;
         background-color: transparent;
         color: white;
         font-weight: 300;
@@ -635,6 +716,80 @@
     }
     #Contact .contactcontents .contactitem .contacticon{
         align-self: center;
+    }
+    .modal {
+        background-color: rgb(172, 165, 165,0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }   
+    .modal .modalcontent {
+        background-color: white;
+        height:50%;
+        width:25%;
+    }
+    .modal .modalcontent .modalitems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        margin-top:15%;
+    }
+    .modal .modalcontent .close {
+        float: right;
+        left: 2%;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        padding:5px 7px;
+        margin-right: 10px;
+        border-radius: 100%;
+    }
+    .modal .modalcontent .modalitems form div {
+        padding-bottom: 2vh;
+        font-size: 1.25em;
+        color: black;
+    }
+    .modal .modalcontent .modalitems form div textarea {
+        width:100%;
+    }
+    .modal .modalcontent .modalitems form .submitbutton {
+        text-align: center;
+        padding-top: 2vh;
+    }
+    .modal .modalcontent .modalitems form .submitbutton button {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 5%;
+        padding-left: 7%;
+        padding-right: 7%;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        width:100%;
+    }
+    .enquiry{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:30vh;
+    }
+    .enquiry #enquiryclick{
+        padding:10px;
+        box-shadow: 0;
+        border:0;
+        background-color: black;
+        color: white;
+        font-size: 1.25em;
     }
     @media (max-width:424px) {
         .nav{
@@ -693,7 +848,6 @@
             font-size: 1em;
         }
         #Contact .contactcontents {
-            background-color: #626c66ff;
             margin: 0;
             float: none;
             display: inline;
@@ -813,7 +967,6 @@
             font-size: 1em;
         }
         #Contact .contactcontents {
-            background-color: #626c66ff;
             margin: 0;
             float: none;
             display: inline;
@@ -938,7 +1091,6 @@
             font-size: 1em;
         }
         #Contact .contactcontents {
-            background-color: #626c66ff;
             margin: 0;
             float: none;
             display: inline;
