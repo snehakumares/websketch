@@ -8,6 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jqueryscript.js"></script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+       </script>
 </head>
 
 <body>
@@ -29,11 +35,11 @@
     <div class="tabnav" id="myTabnav">
         <img src="assets/Logowhite.png" class="tablink" id="logo">
         <img src="assets/logowhite1.png" class="tablink" id="logoname">
-        <a class="tablink" onclick="openPage('Home','tabnav')" id="defaultOpen">HOME</a>
-        <a class="tablink" onclick="openPage('Key_Projects','tabnav')">KEY PROJECTS</a>
-        <a class="tablink" onclick="openPage('Client','tabnav')">CLIENT TESTIMONIAL</a>
-        <a class="tablink" onclick="openPage('Careers','tabnav')">CAREERS</a>
-        <a class="tablink" onclick="openPage('Contact','tabnav')">CONTACT US</a>
+        <a class="tablink" onclick="openPage('Home','tabnav','HOME')" id="defaultOpen">HOME</a>
+        <a class="tablink" onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">KEY PROJECTS</a>
+        <a class="tablink" onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">CLIENT TESTIMONIAL</a>
+        <a class="tablink" onclick="openPage('Careers','tabnav','CAREERS')">CAREERS</a>
+        <a class="tablink" onclick="openPage('Contact','tabnav','CONTACT US')">CONTACT US</a>
     </div>
 
 
@@ -167,31 +173,31 @@
             <p><br><a onclick="openPage('Errorpage','tabnav')" target="_blank"><button>Read the musing of our TechHub Community</button></a></p>
         </div>
         <div class="check2">
-            <p> Are We Liked? Check out what our clients are sayings <button>Our Clients <span style="font-size: small;">&#10095;</span></button></p>
+            <p> Are We Liked? Check out what our clients are sayings <button onclick="openPage('Client','none','CLIENT TESTIMONIAL')">Our Clients <span style="font-size: small;">&#10095;</span></button></p>
         </div>
         <div class="footer">
              <div class="footercontents">
                 <div class="abt">
-                    <img src="assets/Logo.png">
-                    <p>Epoch Zero</p>
+                    <img src="assets/Logowhite.png">
+                    <p><span style="font-weight:bold">epoch</span> zero</p>
                 </div>  
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
              </div>
              <div class="footercontents">
                  <div class="footercontact"> 
-                    <img src="assets/icons/mail-16.png"><p>Mail us at loremipsum@email.com</p>
+                    <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
                  </div>
                  <div class="footercontact">
-                    <img src="assets/icons/phone-16.png"><p>Contact: 9595959595</p>
+                    <img src="assets/icons/phone-16.png"><p>9595959595</p>
                 </div>
              </div>
              <div class="footercontents">
                  <p>Quick Links</p>
-                 <a>>>Home</a><br>
-                 <a>>>Key Projects</a><br>
-                 <a>>>Client Testimonials</a><br>
-                 <a>>>Careers</a><br>
-                 <a>>>Contact Us</a><br>
+                 <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                 <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                 <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                 <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                 <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
              </div>
         </div>
     </div>
@@ -248,36 +254,36 @@
         <div class="footer">
             <div class="footercontents">
                <div class="abt">
-                   <img src="assets/Logo.png">
-                   <p>Epoch Zero</p>
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
                </div>  
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div class="footercontents">
                 <div class="footercontact"> 
-                   <img src="assets/icons/mail-16.png"><p>Mail us at loremipsum@email.com</p>
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
                 </div>
                 <div class="footercontact">
-                   <img src="assets/icons/phone-16.png"><p>Contact: 9595959595</p>
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
                </div>
             </div>
             <div class="footercontents">
                 <p>Quick Links</p>
-                <a>>>Home</a><br>
-                <a>>>Key Projects</a><br>
-                <a>>>Client Testimonials</a><br>
-                <a>>>Careers</a><br>
-                <a>>>Contact Us</a><br>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
             </div>
-        </div>
+       </div>
     </div>
 
     <div id="Client" class="tabcontent">
         <div class="clientheading">
             <div class="head1">
                 <h2>Our Happy Customers</h2>
-                <h4>YOU ARE</h4>
-                <h3>THE CENTER OF OUR UNIVERSE</h3>
+                <p>You Are</p>
+                <p>The Center of Our Universe</p>
             </div>
         </div>
         <div class="clientcontents">
@@ -317,26 +323,26 @@
         <div class="footer">
             <div class="footercontents">
                <div class="abt">
-                   <img src="assets/Logo.png">
-                   <p>Epoch Zero</p>
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
                </div>  
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div class="footercontents">
                 <div class="footercontact"> 
-                   <img src="assets/icons/mail-16.png"><p>Mail us at loremipsum@email.com</p>
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
                 </div>
                 <div class="footercontact">
-                   <img src="assets/icons/phone-16.png"><p>Contact: 9595959595</p>
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
                </div>
             </div>
             <div class="footercontents">
                 <p>Quick Links</p>
-                <a>>>Home</a><br>
-                <a>>>Key Projects</a><br>
-                <a>>>Client Testimonials</a><br>
-                <a>>>Careers</a><br>
-                <a>>>Contact Us</a><br>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
             </div>
        </div>
     </div>
@@ -352,7 +358,7 @@
                 <form>
                     <div>
                         <label for="name">Full name<br></label>
-                        <input type="text" placeholder="Name" name="name" size="40px" required>
+                        <input type="text" name="name" size="40px" required>
                     </div>
                     <div>
                         <label for="position">Position applying for<br></label>
@@ -365,11 +371,11 @@
                     </div>
                     <div>
                         <label for="email">Email Id<br></label>
-                        <input type="email" placeholder="Email " name="email" size="40px" required>
+                        <input type="email" name="email" size="40px" required>
                     </div>
                     <div>
                         <label for="phone">Contact Number<br></label>
-                        <input type="text" placeholder="Phone " name="phone" size="40px" required>
+                        <input type="text" name="phone" size="40px" required>
                     </div>
                     <div id="submit">
                         <button type="submit" value="submit"><h4>Submit</h4></button>
@@ -380,26 +386,26 @@
         <div class="footer">
             <div class="footercontents">
                <div class="abt">
-                   <img src="assets/Logo.png">
-                   <p>Epoch Zero</p>
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
                </div>  
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div class="footercontents">
                 <div class="footercontact"> 
-                   <img src="assets/icons/mail-16.png"><p>Mail us at loremipsum@email.com</p>
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
                 </div>
                 <div class="footercontact">
-                   <img src="assets/icons/phone-16.png"><p>Contact: 9595959595</p>
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
                </div>
             </div>
             <div class="footercontents">
                 <p>Quick Links</p>
-                <a>>>Home</a><br>
-                <a>>>Key Projects</a><br>
-                <a>>>Client Testimonials</a><br>
-                <a>>>Careers</a><br>
-                <a>>>Contact Us</a><br>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
             </div>
        </div>
     </div>
@@ -462,26 +468,26 @@
         <div class="footer">
             <div class="footercontents">
                <div class="abt">
-                   <img src="assets/Logo.png">
-                   <p>Epoch Zero</p>
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
                </div>  
                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div class="footercontents">
                 <div class="footercontact"> 
-                   <img src="assets/icons/mail-16.png"><p>Mail us at loremipsum@email.com</p>
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
                 </div>
                 <div class="footercontact">
-                   <img src="assets/icons/phone-16.png"><p>Contact: 9595959595</p>
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
                </div>
             </div>
             <div class="footercontents">
                 <p>Quick Links</p>
-                <a>>>Home</a><br>
-                <a>>>Key Projects</a><br>
-                <a>>>Client Testimonials</a><br>
-                <a>>>Careers</a><br>
-                <a>>>Contact Us</a><br>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
             </div>
        </div>
     </div>
