@@ -25,14 +25,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position:sticky;
+        top: 0;
+        z-index: 10;
     }
-    .sticky {
+    /*.sticky {
         position: fixed;
+        z-index: 10;
         top: 0;
       }
     .sticky + .tabcontent {
-        padding-top: 60px;
-      }      
+        padding-top: 75px;
+      } */    
     .tabnav .tablink {
         color:white;
         background-color:black;
@@ -57,7 +61,7 @@
         left:0%;
         position:absolute;
         top:30px;
-        background:white;
+        background:#4062da;
         transition:width .3s ease 0s,left .3s ease 0s;
         width:0;
     }
@@ -158,11 +162,11 @@
     }
     @keyframes show{
         0%{
-            transform:scaleY(0);
+            transform: translateY(20%);
             transform-origin: left top;
        }
         100%{
-            transform:scaleY(1);
+            transform: translateY(0%);
         } 
     }
 
@@ -202,7 +206,8 @@
         margin-right: 15%;
     }
     .about .aboutcompany h3{
-        font-size: 1.5em;
+        font-size: 2em;
+        color: #4062da;
     }
     .about .aboutimage img{
         width:300px;
@@ -217,6 +222,7 @@
         height:155vh;
         position:relative;
         background:linear-gradient( white 0.5%,rgb(43, 42, 42) 0.5%);
+        background:linear-gradient( white 0.5%,#07164e 0.5%);
         background-position-y: 7vh;
         background-repeat: no-repeat;
         background-size: cover;
@@ -246,7 +252,7 @@
         height:15vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.4);
         background-blend-mode: darken;
         display: flex;
         align-items: center;
@@ -258,6 +264,9 @@
     }
     .services .worksofar .item:last-child{
        margin-right: 0;
+    }
+    .services .worksofar .item:hover{
+        background-color: rgba(0, 0, 0, 0.8);
     }
    .serv{
        height:100vh;
@@ -288,8 +297,8 @@
         align-content: center;
         margin-right: 2%;
         float:left;
-        background-color: white;
         color: black;
+        background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -299,10 +308,11 @@
         justify-self: center;
         transform-origin: bottom;
         box-shadow: 0 0 5px black;
+        transition: all .2s ease-in;
+        transform-origin: center bottom;
    }
    .serv .servitems .servitem:hover{
-        background-color: rgb(34, 33, 33) ;
-        background:linear-gradient(rgb(43, 42, 42) 5%,rgb(43, 42, 42) 10%,#3f3f3f,#707070);
+       background-color: #4062da;
         color:white;
    }
    .serv .servitems .servitem h3{
@@ -323,10 +333,11 @@
         top:75%;
         left:0%;
         border-radius: 25px;
-        background-image: url("assets/home_banner/img5.jpg");
+        background-image: url("assets/home_banner/img7.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
+        /*background-color: rgba(33, 55, 135, 0.4);*/
         background-blend-mode: darken;
         display: flex;
         justify-content: center;
@@ -401,24 +412,25 @@
         height:3px;
         left:15%;
         position:absolute;
-        background:white;
-        transition:width .3s ease 0s,left .3s ease 0s;width:0
+        background:#4062da;;
+        transition:width .3s ease 0s,left .3s ease 0s;
+        width:0;
     }
     .check p a:hover:after{
         width:70%;
         left:15%;
     }
     .check1 p a button{
-        padding:8px 40px;
+        padding:8px 60px;
         border:0;
         font-size: 1em;
         color: white;
         outline: 0;
-        background: linear-gradient(115deg, black 47%, rgb(56, 54, 54) 47%);
+        background: linear-gradient(115deg, #07164e 48%, #4062da 48%);
         background-size: 200% 100%;
         background-position: left bottom;
         transition: all .5s ease-out;
-        box-shadow: 0px 0px 4px gray;
+        box-shadow: 5px 5px 5px black;
         border-radius: 3px;
         font-family: 'Roboto Mono', monospace;
         align-items: center;
@@ -453,18 +465,19 @@
         align-items: center;
     }
     .check2 p button{
-        padding:5px;
+        padding:5px 40px;
         font-size:1em;
         border:0;
         box-shadow: 0;
         color: white;
         outline: 0;
-        background: linear-gradient(105deg, gray 45%, black 45%);
+        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
         background-size: 200% 100%;
         background-position: left bottom;
         transition: all .5s ease-out;
         box-shadow: 3px 3px 4px gray;
-        margin-left: 20px;
+        margin-left: 10px;
+        font-family: 'Roboto Mono', monospace;
     }
     .check2 p button:hover {
         background-position: right bottom;
@@ -490,10 +503,10 @@
     .footer{
         height:58vh;
         width:100vw;
-        background-color: rgb(165, 160, 160);
+        background-color:#07164e;
         padding:0 15%;
         display: grid;
-        grid-template-columns: 25% 30% 10%;
+        grid-template-columns: 25% 25% 15%;
     }
     .footer .footercontents{
         justify-content: center;
@@ -503,6 +516,9 @@
     .footer .footercontents p{
         margin:10px 0;
     }
+    .footer .footercontents a{
+        cursor: pointer;
+    }
     .footer .footercontents .abt{
         display:grid;
         grid-template-columns: 20% 80%;
@@ -510,7 +526,9 @@
         align-content: center;
     }
     .footer .footercontents .abt p{
-        font-size: 2em;
+        width:max-content;
+        height: auto;
+        font-size: 1.75em;
     }
     .footer .footercontents img{
         margin-right: 15px;
@@ -519,7 +537,7 @@
         margin-top:5px;
     }
     .footer .footercontents .abt img{
-        width:70%;
+        width:80%;
         height:auto;
         align-self: center;
     }
@@ -530,7 +548,6 @@
     }  
     #Key_Projects {
         height: 100%;
-        overflow: hidden;
         display: flex;
         justify-content: center;
         padding: 0;
@@ -539,7 +556,8 @@
     }    
     #Key_Projects .heading{
         height:30vh;
-        background-color: black;
+        text-transform: capitalize;
+        background-color: #4062da;
         display:flex;
         justify-content: center;
         align-items: center;
@@ -553,20 +571,30 @@
     #Key_Projects .keyprojectscontents .card {
         margin-bottom: 10vh;
         background-color: white;
-        width: 85%;
+        width: 90%;
         text-align: center;
         float: left;
         color: black;
         justify-self: center;
         height:500px;
-    }    
-    #Key_Projects .keyprojectscontents .card img {
+    }  
+    #Key_Projects .keyprojectscontents .card:hover{
+        box-shadow: 2px 2px 6px black;
+    }  
+    #Key_Projects .keyprojectscontents .card img{
         width: 100%;
         height: 248px;
     }    
     #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
         text-align: left;
-        padding:10px;
+        padding:10px 20px;
+        margin: 0;
+    }
+    #Key_Projects .keyprojectscontents .card h3{
+        color: #4062da;
+        font-size: 1.5em;
+        padding-bottom:0;
+        margin-top: 20px;
     }
     #Client{
         height: 100%;
@@ -575,8 +603,8 @@
         width: 100vw;
     }
     #Client .clientheading{
-        height:40vh;
-        background-color: black;
+        height:40vh;                
+        background-color: #4062da;
         font-size: 2em;
         width:100%;
         display: flex;
@@ -585,6 +613,10 @@
     }
     #Client .clientheading .head1{
         text-align: center;
+    }
+    #Client .clientheading .head1 p{
+        text-transform: uppercase;
+        font-size: 0.75em;
     }
     #Client .clientcontents{
         width:70%;
@@ -617,8 +649,16 @@
     #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
         margin:20px 20px;
         padding:20px 20px;
+        min-height: 30vh;
         background-color: white;
         box-shadow: 0px 0px 10px gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
+        box-shadow: 0px 0px 10px black;
     }
     #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
         text-align: center;
@@ -634,20 +674,19 @@
         padding:0;
     }    
     #Careers .careerheading{
-        height:20vh;
-        background-color: black;
+        height:30vh;        
+        background-color: #4062da;
         display:flex;
         justify-content: center;
         align-items: center;
         font-size: 2em;
     }
     #Careers .careerscontents {
-        background-color: #626c66ff;
-        margin: 0 15%;
         display: flex;
-        height:80vh;
+        height:55vh;
         justify-content: center;
         align-items: center;
+        color:black;
     }
     #Careers .careerscontents form{
         width: 100%;
@@ -667,17 +706,29 @@
     }    
     #Careers .careerscontents form div label {
         padding-bottom: 1vh;
+        font-size: 1.25em;
     }    
     #Careers .careerscontents form #submit {
         text-align: center;
     }    
     #Careers .careerscontents form #submit button {
-        padding: 2% 3%;
+        padding: 2% 10%;
         font-size: 1em;
         background-color: transparent;
-        color: white;
         font-weight: 300;
+        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
+        color: white;
+        font-size: 1.25em;
+        background-size: 200% 100%;
+        background-position: left bottom;
+        transition: all .5s ease-out;
+        box-shadow: 5px 5px 5px black;
+        width: 100%;
     }    
+    #Careers .careerscontents form #submit button:hover{
+        background-position: right bottom;
+        cursor: pointer;
+    }
     #Careers .careerscontents form #submit button h4 {
         margin: 0;
     }   
@@ -689,8 +740,8 @@
         padding:0;
     }    
     #Contact .contactheading{
-        height:20vh;
-        background-color: black;
+        height:30vh;
+        background-color: #4062da;
         display:flex;
         justify-content: center;
         align-items: center;
@@ -698,7 +749,7 @@
     }
     #Contact .contactcontents{
         margin:0 30%;
-        height:30vh;
+        height:20vh;
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -708,11 +759,14 @@
         width: 90%;
         display: grid;
         grid-template-columns: 20% 80%;
-        height: 30%;
+        height: 40%;
+        padding:5% 0%;
         justify-items: center;
         align-content: center;
         justify-self: center;
-        align-self: center;
+        align-self: end;
+        background-color: #07164e;
+        color: white;
     }
     #Contact .contactcontents .contactitem .contacticon{
         align-self: center;
@@ -756,6 +810,9 @@
         font-size: 1.25em;
         color: black;
     }
+    .modal .modalcontent .modalitems form div input{
+        padding:6px;
+    }
     .modal .modalcontent .modalitems form div textarea {
         width:100%;
     }
@@ -765,7 +822,7 @@
     }
     .modal .modalcontent .modalitems form .submitbutton button {
         text-align: center;
-        background-color: black;
+        background-color: #4062da;
         color: white;
         font-weight: bold;
         padding: 5%;
@@ -781,15 +838,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height:30vh;
+        height:20vh;
     }
     .enquiry #enquiryclick{
-        padding:10px;
+        padding:10px 30px;
         box-shadow: 0;
         border:0;
-        background-color: black;
+        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
         color: white;
         font-size: 1.25em;
+        background-size: 200% 100%;
+        background-position: left bottom;
+        transition: all .5s ease-out;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 3px;
+    }
+    .enquiry #enquiryclick:hover{
+        background-position: right bottom;
+        cursor: pointer;
+    }
+    .slideanim {                    
+        animation: slide 2s;
+    }
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        } 
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        } 
     }
     @media (max-width:424px) {
         .nav{
