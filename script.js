@@ -1,13 +1,7 @@
 
-window.onscroll = function(){stickyFunc()};
-var tabnav = document.getElementById("myTabnav");
-var sticky = tabnav.offsetTop;
-function stickyFunc(){
-    if (window.pageYOffset >= sticky) {
-        tabnav.classList.add("sticky")
-      } else {
-        tabnav.classList.remove("sticky");
-      }   
+window.onload = function(){
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 }
 
 function openPage(pageName, elmnt, name) {
@@ -17,7 +11,9 @@ function openPage(pageName, elmnt, name) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-
+    if(tabcontent.display=="none"){
+        elmnt="topnav";
+    }
     // Show the specific tab content
     document.getElementById(pageName).style.display = "block";
     if(pageName=="Errorpage"){
@@ -28,9 +24,9 @@ function openPage(pageName, elmnt, name) {
         var topnav = document.getElementById("myTopnav");
         var i;
         topnav.className = "topnav";
-        show = document.getElementById("show");
-        show.innerHTML = name;
     }
+    show = document.getElementById("show");
+    show.innerHTML = name;
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 }
