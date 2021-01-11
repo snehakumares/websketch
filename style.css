@@ -1,10 +1,3 @@
-    /* CSS HEX 
---dark-purple: #242038ff;
---light-pink: #f7b2b7ff;
---beau-blue: #c7dbe6ff;
---nickel: #626c66ff;
---metallic-seaweed: #1f7a8cff;*/
-    
     html {
         font-family: 'Roboto Mono', monospace;
     }    
@@ -1237,6 +1230,7 @@
             font-size: 0.75em;
             margin-top: 1vh;
             padding:7px;
+            background-color: white;
         } 
         #Careers .careerscontents form input{
             width: 94%;
