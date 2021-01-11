@@ -17,8 +17,7 @@ function openPage(pageName, elmnt, name) {
     // Show the specific tab content
     document.getElementById(pageName).style.display = "block";
     if(pageName=="Errorpage"){
-        
-    document.getElementById(pageName).style.display = "flex";
+        document.getElementById(pageName).style.display = "flex";
     }
     if (elmnt == "topnav") {
         var topnav = document.getElementById("myTopnav");
