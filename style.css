@@ -7,6 +7,12 @@
         width:100vw;
         overflow-x: hidden;
     }    
+    html,body{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; 
+    }
     .nav{
         height:0px;
         background-color: black;
@@ -20,7 +26,7 @@
         align-items: center;
         position:sticky;
         top: 0;
-        z-index: 10;
+        z-index: 1000;
     }
     /*.sticky {
         position: fixed;
@@ -64,7 +70,7 @@
     }    
     .topnav {
         position:sticky;
-        z-index: 10;
+        z-index: 1000;
         color:white;
         background-color: black;
         display: none;
@@ -656,7 +662,6 @@
     }
     #Careers{
         height: 100%;
-        overflow-y: hidden;
         width: 100%;
         margin: 0;
         padding:0;
@@ -722,7 +727,6 @@
     }   
     #Contact{
         height: 100%;
-        overflow-y: hidden;
         width: 100%;
         margin: 0;
         padding:0;
@@ -2258,243 +2262,32 @@
     }
     
     @media (min-width:1024px) and (max-width:1439px) {
-        html {
-            font-family: 'Roboto Mono', monospace;
-        }    
-        body {
-            margin: 0;
-            padding: 0;
-            width:100vw;
-            overflow-x: hidden;
-        }    
-        .nav{
-            height:0px;
-            background-color: black;
-        }
-        .tabnav{
-            width:100vw;
-            height:75px;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position:sticky;
-            top: 0;
-            z-index: 10;
-        }
-        /*.sticky {
-            position: fixed;
-            z-index: 10;
-            top: 0;
-          }
-        .sticky + .tabcontent {
-            padding-top: 75px;
-          } */    
-        .tabnav .tablink {
-            color:white;
-            background-color:black;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            font-size: 15px;
-            min-width: 4%;
-            font-weight: 500;
-            padding:0 20px;
-            letter-spacing:.15em;
-            text-decoration: none;
-            height: fit-content;
-            position: relative;
-            text-align: center;
-        }  
-        .tabnav .tablink:after{
-            bottom:0;
-            content:"";
-            height:2px;
-            left:0%;
-            position:absolute;
-            top:30px;
-            background:#4062da;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .tabnav .tablink:hover:after{
+        html,body{
             width: 100%;
-            left:0;
-        }    
-        .topnav {
-            position:sticky;
-            z-index: 10;
-            color:white;
-            background-color: black;
-            display: none;
-        }    
-        .tabnav .tablink:hover {
-            cursor: pointer;
-        }  
-        #logo{
-            height : 50px;
-            width:auto;
-            padding: 12px 0;
-        }
-        #logoname{  
-            padding: 0;
-            min-width:5%;
-        }
-        #logoname{
-            height:30px;
-            padding: 0 20px 0 0;
-        }
-        #logoname:hover{
-            cursor: default;
-        }  
-        .tabcontent {
-            color: white;
-            display: none;
-            padding: 40px 20px;
             height: 100%;
-        }    
-        .topnav a{
-            cursor: pointer;
-        }
-        #Home {
-            height: 100%;
-            padding:0;
-            margin-top: 0;
-        }  
-        .banner{
-            height:100vh;
-            background-image: url("assets/home_banner/img6.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            background-blend-mode: darken;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .bannercontent{
-            width:80vw;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-        #home1{
-            font-size: 2em;
-            height:45px;
-            animation: show 1s;
-        }        
-        #home2{
-            font-size: 3em;
-            font-weight: 500;
-            margin-top:10px;
-            height:180px;
-            animation: show 1s;
-        }
-        #home3{
-            font-size: 1.5em;
-            height:30px;
-            display: block;
-            margin-top:50px;
-            
-        }
-        #home3 .line{
-            font-size: 1.25em;
-            height:50px;
-        }    
-        .animated-text{
-            color: #fff;
-            transform: translate(0%,-50%);
-            height: 30px;
-            overflow: hidden;
-        }    
-        .line:first-child{
-            animation: anim 12s infinite;
-        }
-        @keyframes show{
-            0%{
-                transform: translateY(20%);
-                transform-origin: left top;
-           }
-            100%{
-                transform: translateY(0%);
-            } 
-        }
-        @keyframes anim {
-            0%{
-              margin-top: 0;
-            }
-            16%{
-              margin-top: -55px;
-            }
-            33%{
-              margin-top: -105px;
-            }
-            50%{
-              margin-top: -155px;
-            }
-            66%{
-              margin-top: -105px;
-            }
-            82%{
-              margin-top: -55px;
-            }
-            100%{
-              margin-top: 0;
-            }
-          }
-        .about{
-            height:92vh;
-            color:black;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 15%;
-            margin-right: 15%;
-        }   
-        .about .aboutcompany{
-            margin-right: 15%;
-        }
-        .about .aboutcompany h3{
-            font-size: 2em;
-            color: #4062da;
-        }
-        .about .aboutimage img{
-            width:300px;
-            height:300px;
-            border-radius: 500%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden; 
         }
         .serv_proj{
-            height:185vh;
+            height:300vh;
             position:relative;
         }
         .services{
-            height:155vh;
+            height:275vh;
             position:relative;
             background:linear-gradient( white 0.5%,#07164e 0.5%);
             background-position-y: 7vh;
             background-repeat: no-repeat;
         }
         .services .worksofar{
-            margin:0 15%;
+            margin:0 5%;
             height: 15vh;
             width: 100%;
         }
-        .services .worksofar #item1{
-            background-image: url("assets/home_banner/img2.jfif");
-        }
-        .services .worksofar #item2{
-            background-image: url("assets/home_banner/img3.jfif");
-        }
-        .services .worksofar #item3{
-            background-image: url("assets/home_banner/img4.jpeg");
-        }
-        .services .worksofar #item4{
-            background-image: url("assets/home_banner/img5.jpg");
-        }
         .services .worksofar .item{
-            width:13.75%;
-            margin-right:5%;
+            width:20%;
+            margin-right:3.3%;
             float: left;
             z-index: 2;
             height:15vh;
@@ -2507,40 +2300,23 @@
             justify-content: center;
             text-align: center;
         }
-        .services .worksofar .item p{
-            font-weight: bold;
-        }
-        .services .worksofar .item:last-child{
-           margin-right: 0;
-        }
-        .services .worksofar .item:hover{
-            background-color: rgba(0, 0, 0, 0.8);
-        }
        .serv{
            height:100vh;
            width:100%;
            position:absolute;
            top:12%;
        }
-       .serv h4{
-           text-align: center;
-           font-size: 1.75em;
-       }
-       .serv h2{
-            font-size: 3em;
-            text-align: center;
-            margin-bottom: 7vh;
-       }
        .serv .servitems{
-            margin: 0 15%;
+            margin: 0 3%;
             display:grid;
-            height:80%;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 50% 50%;
+            height:min-content;
+            grid-template-rows: 25% 25% 25% 25%;
+            grid-template-columns: 50% 50%;
        }
        .serv .servitems .servitem{
-            height:35vh;
-            width:75%;
+            margin-bottom: 10vh;
+            min-height: min-content;
+            width:90%;
             justify-content: center;
             align-content: center;
             margin-right: 2%;
@@ -2559,10 +2335,6 @@
             transition: all .2s ease-in;
             transform-origin: center bottom;
        }
-       .serv .servitems .servitem:hover{
-           background-color: #4062da;
-            color:white;
-       }
        .serv .servitems .servitem h3{
             text-align: center;
             padding:0 10px;
@@ -2573,12 +2345,12 @@
         }
         .projects{
             height:50vh;
-            width:70%;
-            margin:0% 15%;
+            width:90%;
+            margin:0% 5%;
             text-align: center;
             padding:0;
             position: absolute;
-            top:75%;
+            top:83%;
             left:0%;
             border-radius: 25px;
             background-image: url("assets/home_banner/img7.jpg");
@@ -2591,225 +2363,18 @@
             justify-content: center;
             align-items: center;
         }
-        .projects .projectitems{
-            display:grid;
-            grid-template-columns: 35% 70%;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 95%;
-        }
-        .projects .projectitems .head h2{
-            margin:0;
-            font-size: 2em;
-        }
-        .projects .projectitems .projectContents{
-            height:100%;
-            width:100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .projects .projectitems .projectContents .projectul{
-            padding:0;
-            color:white;
-            position: absolute;
-            width:70%;
-            font-size: 1em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides h3{
-            font-size: 1.25em;
-        }
-        .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-            position:absolute;
-            top:50%;
-            background-color: black;
-            color: white;
-            box-shadow: 0;
-            outline: 0;
-            border: 0;
-            padding:10px;
-            box-shadow: 0 0 1px gray;
-        }
-        .projects .projectitems .projectContents .prev{
-            left:7%;
-        }
-        .projects .projectitems .projectContents .next{
-            right:7%;
-        }
-        .check{
-            margin-top:5%;
-            height:50px;
-            width:100%;
-            text-align: center;
-            color:white;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .check p:hover{
-            cursor: pointer;
-        }
-        .check p a:after{
-            bottom:0;
-            content:"";
-            display:block;
-            height:3px;
-            left:15%;
-            position:absolute;
-            background:#4062da;;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .check p a:hover:after{
-            width:70%;
-            left:15%;
-        }
-        .check1 p a button{
-            padding:8px 60px;
-            border:0;
-            font-size: 1em;
-            color: white;
-            outline: 0;
-            background: linear-gradient(115deg, #07164e 48%, #4062da 48%);
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            border-radius: 3px;
-            font-family: 'Roboto Mono', monospace;
-            align-items: center;
-        }
-        .check1 p a button:hover {
-            background-position: right bottom;
-            cursor: pointer;
-          }
-        .check1{
-            margin-top:5%;
-            height:50px;
-            width:100%;
-            color:black;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .check1 p a{
-            text-decoration: none;
-            color: black;
-            transition: all .5s ease-out;
-        }
-        .check2{
-            margin-top:5%;
-            height:200px;
-            width:100%;
-            color:black;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .check2 p button{
-            padding:5px 40px;
-            font-size:1em;
-            border:0;
-            box-shadow: 0;
-            color: white;
-            outline: 0;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 3px 3px 4px gray;
-            margin-left: 10px;
-            font-family: 'Roboto Mono', monospace;
-        }
-        .check2 p button:hover {
-            background-position: right bottom;
-            cursor: pointer;
-          }
-        #Errorpage{
-            height:75vh;
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            flex-direction: column;
-        }
-        #Errorpage h1{
-            font-size: 5em;
-            margin:0;
-        }
-        #Errorpage h3{
-            font-size: 3em;
-            margin: 0;
-        }
         .footer{
             height:58vh;
             width:100vw;
             background-color:#07164e;
-            padding:0 15%;
+            padding:0 5%;
             display: grid;
-            grid-template-columns: 25% 25% 15%;
+            grid-template-columns: 30% 30% 30% 5%;
         }
         .footer .footercontents{
             justify-content: center;
             align-self: center;
             justify-self: center;
-        }
-        .footer .footercontents p{
-            margin:10px 0;
-        }
-        .footer .footercontents a{
-            cursor: pointer;
-        }
-        .footer .footercontents .abt{
-            display:grid;
-            grid-template-columns: 20% 80%;
-            justify-content: center;
-            align-content: center;
-        }
-        .footer .footercontents .abt p{
-            width:max-content;
-            height: auto;
-            font-size: 1.75em;
-        }
-        .footer .footercontents img{
-            margin-right: 15px;
-            width:27px;
-            height: auto;
-            margin-top:5px;
-        }
-        .footer .footercontents .abt img{
-            width:80%;
-            height:auto;
-            align-self: center;
-        }
-        .footer .footercontents .footercontact{
-            display: grid;
-            grid-template-columns: 13% 87%;
-            align-items: center;
-        }  
-        #Key_Projects {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }    
-        #Key_Projects .heading{
-            height:30vh;
-            text-transform: capitalize;
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
         }
         #Key_Projects .keyprojectscontents {
             margin:10vh 20%;
@@ -2824,51 +2389,16 @@
             float: left;
             color: black;
             justify-self: center;
-            height:500px;
+            height:55vh;
         }  
-        #Key_Projects .keyprojectscontents .card:hover{
-            box-shadow: 2px 2px 6px black;
-        }  
-        #Key_Projects .keyprojectscontents .card img{
-            width: 100%;
-            height: 248px;
-        }    
         #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
             text-align: left;
-            padding:10px 20px;
+            padding:20px 20px;
             margin: 0;
-        }
-        #Key_Projects .keyprojectscontents .card h3{
-            color: #4062da;
-            font-size: 1.5em;
-            padding-bottom:0;
-            margin-top: 20px;
-        }
-        #Client{
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }
-        #Client .clientheading{
-            height:40vh;                
-            background-color: #4062da;
-            font-size: 2em;
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #Client .clientheading .head1{
-            text-align: center;
-        }
-        #Client .clientheading .head1 p{
-            text-transform: uppercase;
-            font-size: 0.75em;
         }
         #Client .clientcontents{
             width:70%;
-            height:40vh;
+            height:min-content;
             margin:2% 15%;
             display:grid;
             grid-template-columns: 5% 90% 5%;
@@ -2889,6 +2419,7 @@
             height: 20px;
             width: 20px;
             cursor: pointer;
+            z-index:100;
         }
         #Client .clientcontents .clientul .clientSlides{
             display: flex;
@@ -2904,99 +2435,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-            box-shadow: 0px 0px 10px black;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-            text-align: center;
-        }
-        .doublequotes{
-            font-size: 1.5em;
-        }
-        #Careers{
-            height: 100%;
-            overflow-y: hidden;
-            width: 100%;
-            margin: 0;
-            padding:0;
-        }    
-        #Careers .careerheading{
-            height:30vh;        
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-        }
-        #Careers .careerscontents {
-            display: flex;
-            height:55vh;
-            justify-content: center;
-            align-items: center;
-            color:black;
-        }
-        #Careers .careerscontents form{
-            width: 100%;
-        }    
-        #Careers .careerscontents form select{
-            width:100%;
-            font-size: 1em;
-            padding:10px;
-        } 
-        #Careers .careerscontents form input{
-            width: 94%;
-            font-size: 1em;
-            padding:10px;
-        }      
-        #Careers .careerscontents form div {
-            padding-bottom: 2vh;
-        }    
-        #Careers .careerscontents form div label {
-            padding-bottom: 1vh;
-            font-size: 1.25em;
-        }    
-        #Careers .careerscontents form #submit {
-            text-align: center;
-        }    
-        #Careers .careerscontents form #submit button {
-            padding: 2% 10%;
-            font-size: 1em;
-            background-color: transparent;
-            font-weight: 300;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            color: white;
-            font-size: 1.25em;
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            width: 100%;
-        }    
-        #Careers .careerscontents form #submit button:hover{
-            background-position: right bottom;
-            cursor: pointer;
-        }
-        #Careers .careerscontents form #submit button h4 {
-            margin: 0;
-        }   
-        #Contact{
-            height: 100%;
-            overflow-y: hidden;
-            width: 100%;
-            margin: 0;
-            padding:0;
-        }    
-        #Contact .contactheading{
-            height:30vh;
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
+            width:20vh;
         }
         #Contact .contactcontents{
-            margin:0 30%;
+            margin:0 15%;
             height:20vh;
             display: grid;
             grid-template-columns: 50% 50%;
@@ -3015,29 +2457,11 @@
             align-self: end;
             background-color: #07164e;
             color: white;
-        }
-        #Contact .contactcontents .contactitem .contacticon{
-            align-self: center;
-        }
-        #Contact .contactcontents .contactitem .contactdetails{
-            justify-self: self-start;
-        }
-        .modal {
-            background-color: rgb(172, 165, 165,0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-        }   
+        }  
         .modal .modalcontent {
             background-color: white;
             height:50%;
-            width:25%;
+            width:35%;
         }
         .modal .modalcontent .modalitems {
             display: flex;
@@ -3085,906 +2509,4 @@
             cursor: pointer;
             width:100%;
         }
-        .enquiry{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:20vh;
-        }
-        .enquiry #enquiryclick{
-            padding:10px 30px;
-            box-shadow: 0;
-            border:0;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            color: white;
-            font-size: 1.25em;
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            border-radius: 3px;
-        }
-        .enquiry #enquiryclick:hover{
-            background-position: right bottom;
-            cursor: pointer;
-        }
-        .slideanim {                    
-            animation: slide 2s;
-        }
-        @keyframes slide {
-            0% {
-                opacity: 0;
-                transform: translateY(70%);
-            } 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            } 
-        }
-    }
-    
-    @media (min-width:1440px) {
-        html {
-            font-family: 'Roboto Mono', monospace;
-        }    
-        body {
-            margin: 0;
-            padding: 0;
-            width:100vw;
-            overflow-x: hidden;
-        }    
-        .nav{
-            height:0px;
-            background-color: black;
-        }
-        .tabnav{
-            width:100vw;
-            height:75px;
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position:sticky;
-            top: 0;
-            z-index: 10;
-        }
-        /*.sticky {
-            position: fixed;
-            z-index: 10;
-            top: 0;
-          }
-        .sticky + .tabcontent {
-            padding-top: 75px;
-          } */    
-        .tabnav .tablink {
-            color:white;
-            background-color:black;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            font-size: 15px;
-            min-width: 4%;
-            font-weight: 500;
-            padding:0 20px;
-            letter-spacing:.15em;
-            text-decoration: none;
-            height: fit-content;
-            position: relative;
-            text-align: center;
-        }  
-        .tabnav .tablink:after{
-            bottom:0;
-            content:"";
-            height:2px;
-            left:0%;
-            position:absolute;
-            top:30px;
-            background:#4062da;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .tabnav .tablink:hover:after{
-            width: 100%;
-            left:0;
-        }    
-        .topnav {
-            position:sticky;
-            z-index: 10;
-            color:white;
-            background-color: black;
-            display: none;
-        }    
-        .tabnav .tablink:hover {
-            cursor: pointer;
-        }  
-        #logo{
-            height : 50px;
-            width:auto;
-            padding: 12px 0;
-        }
-        #logoname{  
-            padding: 0;
-            min-width:5%;
-        }
-        #logoname{
-            height:30px;
-            padding: 0 20px 0 0;
-        }
-        #logoname:hover{
-            cursor: default;
-        }  
-        .tabcontent {
-            color: white;
-            display: none;
-            padding: 40px 20px;
-            height: 100%;
-        }    
-        .topnav a{
-            cursor: pointer;
-        }
-        #Home {
-            height: 100%;
-            padding:0;
-            margin-top: 0;
-        }  
-        .banner{
-            height:100vh;
-            background-image: url("assets/home_banner/img6.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            background-blend-mode: darken;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .bannercontent{
-            width:80vw;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-        #home1{
-            font-size: 2em;
-            height:45px;
-            animation: show 1s;
-        }        
-        #home2{
-            font-size: 3em;
-            font-weight: 500;
-            margin-top:10px;
-            height:180px;
-            animation: show 1s;
-        }
-        #home3{
-            font-size: 1.5em;
-            height:30px;
-            display: block;
-            margin-top:50px;
-            
-        }
-        #home3 .line{
-            font-size: 1.25em;
-            height:50px;
-        }    
-        .animated-text{
-            color: #fff;
-            transform: translate(0%,-50%);
-            height: 30px;
-            overflow: hidden;
-        }    
-        .line:first-child{
-            animation: anim 12s infinite;
-        }
-        @keyframes show{
-            0%{
-                transform: translateY(20%);
-                transform-origin: left top;
-           }
-            100%{
-                transform: translateY(0%);
-            } 
-        }
-        @keyframes anim {
-            0%{
-              margin-top: 0;
-            }
-            16%{
-              margin-top: -55px;
-            }
-            33%{
-              margin-top: -105px;
-            }
-            50%{
-              margin-top: -155px;
-            }
-            66%{
-              margin-top: -105px;
-            }
-            82%{
-              margin-top: -55px;
-            }
-            100%{
-              margin-top: 0;
-            }
-          }
-        .about{
-            height:92vh;
-            color:black;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 15%;
-            margin-right: 15%;
-        }   
-        .about .aboutcompany{
-            margin-right: 15%;
-        }
-        .about .aboutcompany h3{
-            font-size: 2em;
-            color: #4062da;
-        }
-        .about .aboutimage img{
-            width:300px;
-            height:300px;
-            border-radius: 500%;
-        }
-        .serv_proj{
-            height:185vh;
-            position:relative;
-        }
-        .services{
-            height:155vh;
-            position:relative;
-            background:linear-gradient( white 0.5%,#07164e 0.5%);
-            background-position-y: 7vh;
-            background-repeat: no-repeat;
-        }
-        .services .worksofar{
-            margin:0 15%;
-            height: 15vh;
-            width: 100%;
-        }
-        .services .worksofar #item1{
-            background-image: url("assets/home_banner/img2.jfif");
-        }
-        .services .worksofar #item2{
-            background-image: url("assets/home_banner/img3.jfif");
-        }
-        .services .worksofar #item3{
-            background-image: url("assets/home_banner/img4.jpeg");
-        }
-        .services .worksofar #item4{
-            background-image: url("assets/home_banner/img5.jpg");
-        }
-        .services .worksofar .item{
-            width:13.75%;
-            margin-right:5%;
-            float: left;
-            z-index: 2;
-            height:15vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.4);
-            background-blend-mode: darken;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .services .worksofar .item p{
-            font-weight: bold;
-        }
-        .services .worksofar .item:last-child{
-           margin-right: 0;
-        }
-        .services .worksofar .item:hover{
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-       .serv{
-           height:100vh;
-           width:100%;
-           position:absolute;
-           top:12%;
-       }
-       .serv h4{
-           text-align: center;
-           font-size: 1.75em;
-       }
-       .serv h2{
-            font-size: 3em;
-            text-align: center;
-            margin-bottom: 7vh;
-       }
-       .serv .servitems{
-            margin: 0 15%;
-            display:grid;
-            height:80%;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 50% 50%;
-       }
-       .serv .servitems .servitem{
-            height:35vh;
-            width:75%;
-            justify-content: center;
-            align-content: center;
-            margin-right: 2%;
-            float:left;
-            color: black;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            align-self: center;
-            justify-self: center;
-            transform-origin: bottom;
-            box-shadow: 0 0 5px black;
-            transition: all .2s ease-in;
-            transform-origin: center bottom;
-       }
-       .serv .servitems .servitem:hover{
-           background-color: #4062da;
-            color:white;
-       }
-       .serv .servitems .servitem h3{
-            text-align: center;
-            padding:0 10px;
-        } 
-        .serv .servitems .servitem p{
-            padding:20px;
-            font-size: 0.75em;
-        }
-        .projects{
-            height:50vh;
-            width:70%;
-            margin:0% 15%;
-            text-align: center;
-            padding:0;
-            position: absolute;
-            top:75%;
-            left:0%;
-            border-radius: 25px;
-            background-image: url("assets/home_banner/img7.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            /*background-color: rgba(33, 55, 135, 0.4);*/
-            background-blend-mode: darken;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .projects .projectitems{
-            display:grid;
-            grid-template-columns: 35% 70%;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 95%;
-        }
-        .projects .projectitems .head h2{
-            margin:0;
-            font-size: 2em;
-        }
-        .projects .projectitems .projectContents{
-            height:100%;
-            width:100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .projects .projectitems .projectContents .projectul{
-            padding:0;
-            color:white;
-            position: absolute;
-            width:70%;
-            font-size: 1em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides h3{
-            font-size: 1.25em;
-        }
-        .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-            position:absolute;
-            top:50%;
-            background-color: black;
-            color: white;
-            box-shadow: 0;
-            outline: 0;
-            border: 0;
-            padding:10px;
-            box-shadow: 0 0 1px gray;
-        }
-        .projects .projectitems .projectContents .prev{
-            left:7%;
-        }
-        .projects .projectitems .projectContents .next{
-            right:7%;
-        }
-        .check{
-            margin-top:5%;
-            height:50px;
-            width:100%;
-            text-align: center;
-            color:white;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .check p:hover{
-            cursor: pointer;
-        }
-        .check p a:after{
-            bottom:0;
-            content:"";
-            display:block;
-            height:3px;
-            left:15%;
-            position:absolute;
-            background:#4062da;;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .check p a:hover:after{
-            width:70%;
-            left:15%;
-        }
-        .check1 p a button{
-            padding:8px 60px;
-            border:0;
-            font-size: 1em;
-            color: white;
-            outline: 0;
-            background: linear-gradient(115deg, #07164e 48%, #4062da 48%);
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            border-radius: 3px;
-            font-family: 'Roboto Mono', monospace;
-            align-items: center;
-        }
-        .check1 p a button:hover {
-            background-position: right bottom;
-            cursor: pointer;
-          }
-        .check1{
-            margin-top:5%;
-            height:50px;
-            width:100%;
-            color:black;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .check1 p a{
-            text-decoration: none;
-            color: black;
-            transition: all .5s ease-out;
-        }
-        .check2{
-            margin-top:5%;
-            height:200px;
-            width:100%;
-            color:black;
-            font-size: 1.25em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .check2 p button{
-            padding:5px 40px;
-            font-size:1em;
-            border:0;
-            box-shadow: 0;
-            color: white;
-            outline: 0;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 3px 3px 4px gray;
-            margin-left: 10px;
-            font-family: 'Roboto Mono', monospace;
-        }
-        .check2 p button:hover {
-            background-position: right bottom;
-            cursor: pointer;
-          }
-        #Errorpage{
-            height:75vh;
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            flex-direction: column;
-        }
-        #Errorpage h1{
-            font-size: 5em;
-            margin:0;
-        }
-        #Errorpage h3{
-            font-size: 3em;
-            margin: 0;
-        }
-        .footer{
-            height:58vh;
-            width:100vw;
-            background-color:#07164e;
-            padding:0 15%;
-            display: grid;
-            grid-template-columns: 25% 25% 15%;
-        }
-        .footer .footercontents{
-            justify-content: center;
-            align-self: center;
-            justify-self: center;
-        }
-        .footer .footercontents p{
-            margin:10px 0;
-        }
-        .footer .footercontents a{
-            cursor: pointer;
-        }
-        .footer .footercontents .abt{
-            display:grid;
-            grid-template-columns: 20% 80%;
-            justify-content: center;
-            align-content: center;
-        }
-        .footer .footercontents .abt p{
-            width:max-content;
-            height: auto;
-            font-size: 1.75em;
-        }
-        .footer .footercontents img{
-            margin-right: 15px;
-            width:27px;
-            height: auto;
-            margin-top:5px;
-        }
-        .footer .footercontents .abt img{
-            width:80%;
-            height:auto;
-            align-self: center;
-        }
-        .footer .footercontents .footercontact{
-            display: grid;
-            grid-template-columns: 13% 87%;
-            align-items: center;
-        }  
-        #Key_Projects {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }    
-        #Key_Projects .heading{
-            height:30vh;
-            text-transform: capitalize;
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-        }
-        #Key_Projects .keyprojectscontents {
-            margin:10vh 20%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }    
-        #Key_Projects .keyprojectscontents .card {
-            margin-bottom: 10vh;
-            background-color: white;
-            width: 90%;
-            text-align: center;
-            float: left;
-            color: black;
-            justify-self: center;
-            height:500px;
-        }  
-        #Key_Projects .keyprojectscontents .card:hover{
-            box-shadow: 2px 2px 6px black;
-        }  
-        #Key_Projects .keyprojectscontents .card img{
-            width: 100%;
-            height: 248px;
-        }    
-        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-            text-align: left;
-            padding:10px 20px;
-            margin: 0;
-        }
-        #Key_Projects .keyprojectscontents .card h3{
-            color: #4062da;
-            font-size: 1.5em;
-            padding-bottom:0;
-            margin-top: 20px;
-        }
-        #Client{
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }
-        #Client .clientheading{
-            height:40vh;                
-            background-color: #4062da;
-            font-size: 2em;
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #Client .clientheading .head1{
-            text-align: center;
-        }
-        #Client .clientheading .head1 p{
-            text-transform: uppercase;
-            font-size: 0.75em;
-        }
-        #Client .clientcontents{
-            width:70%;
-            height:40vh;
-            margin:2% 15%;
-            display:grid;
-            grid-template-columns: 5% 90% 5%;
-            justify-items: center;
-            align-items: center;
-        }
-        #Client .clientcontents .clientul{
-            padding:0;
-            color:black;
-            margin: 0;
-        }
-        #Client .clientcontents .prev1,#Client .clientcontents .next1{
-            color: black;
-            box-shadow: 0;
-            border-radius: 100%;
-            outline: 0;
-            border: 0;
-            height: 20px;
-            width: 20px;
-            cursor: pointer;
-        }
-        #Client .clientcontents .clientul .clientSlides{
-            display: flex;
-            height:100%;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-            margin:20px 20px;
-            padding:20px 20px;
-            min-height: 30vh;
-            background-color: white;
-            box-shadow: 0px 0px 10px gray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-            box-shadow: 0px 0px 10px black;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-            text-align: center;
-        }
-        .doublequotes{
-            font-size: 1.5em;
-        }
-        #Careers{
-            height: 100%;
-            overflow-y: hidden;
-            width: 100%;
-            margin: 0;
-            padding:0;
-        }    
-        #Careers .careerheading{
-            height:30vh;        
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-        }
-        #Careers .careerscontents {
-            display: flex;
-            height:55vh;
-            justify-content: center;
-            align-items: center;
-            color:black;
-        }
-        #Careers .careerscontents form{
-            width: 100%;
-        }    
-        #Careers .careerscontents form select{
-            width:100%;
-            font-size: 1em;
-            padding:10px;
-        } 
-        #Careers .careerscontents form input{
-            width: 94%;
-            font-size: 1em;
-            padding:10px;
-        }      
-        #Careers .careerscontents form div {
-            padding-bottom: 2vh;
-        }    
-        #Careers .careerscontents form div label {
-            padding-bottom: 1vh;
-            font-size: 1.25em;
-        }    
-        #Careers .careerscontents form #submit {
-            text-align: center;
-        }    
-        #Careers .careerscontents form #submit button {
-            padding: 2% 10%;
-            font-size: 1em;
-            background-color: transparent;
-            font-weight: 300;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            color: white;
-            font-size: 1.25em;
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            width: 100%;
-        }    
-        #Careers .careerscontents form #submit button:hover{
-            background-position: right bottom;
-            cursor: pointer;
-        }
-        #Careers .careerscontents form #submit button h4 {
-            margin: 0;
-        }   
-        #Contact{
-            height: 100%;
-            overflow-y: hidden;
-            width: 100%;
-            margin: 0;
-            padding:0;
-        }    
-        #Contact .contactheading{
-            height:30vh;
-            background-color: #4062da;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-        }
-        #Contact .contactcontents{
-            margin:0 30%;
-            height:20vh;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 30px rgb(201, 196, 196);
-            color:black;
-            width: 90%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            height: 40%;
-            padding:5% 0%;
-            justify-items: center;
-            align-content: center;
-            justify-self: center;
-            align-self: end;
-            background-color: #07164e;
-            color: white;
-        }
-        #Contact .contactcontents .contactitem .contacticon{
-            align-self: center;
-        }
-        #Contact .contactcontents .contactitem .contactdetails{
-            justify-self: self-start;
-        }
-        .modal {
-            background-color: rgb(172, 165, 165,0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-        }   
-        .modal .modalcontent {
-            background-color: white;
-            height:50%;
-            width:25%;
-        }
-        .modal .modalcontent .modalitems {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin:0;
-            margin-top:15%;
-        }
-        .modal .modalcontent .close {
-            float: right;
-            left: 2%;
-            cursor: pointer;
-            color: black;
-            font-weight: bold;
-            padding:5px 7px;
-            margin-right: 10px;
-            border-radius: 100%;
-        }
-        .modal .modalcontent .modalitems form div {
-            padding-bottom: 2vh;
-            font-size: 1.25em;
-            color: black;
-        }
-        .modal .modalcontent .modalitems form div input{
-            padding:6px;
-        }
-        .modal .modalcontent .modalitems form div textarea {
-            width:100%;
-        }
-        .modal .modalcontent .modalitems form .submitbutton {
-            text-align: center;
-            padding-top: 2vh;
-        }
-        .modal .modalcontent .modalitems form .submitbutton button {
-            text-align: center;
-            background-color: #4062da;
-            color: white;
-            font-weight: bold;
-            padding: 5%;
-            padding-left: 7%;
-            padding-right: 7%;
-            outline: none;
-            box-shadow: none;
-            border: none;
-            cursor: pointer;
-            width:100%;
-        }
-        .enquiry{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:20vh;
-        }
-        .enquiry #enquiryclick{
-            padding:10px 30px;
-            box-shadow: 0;
-            border:0;
-            background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-            color: white;
-            font-size: 1.25em;
-            background-size: 200% 100%;
-            background-position: left bottom;
-            transition: all .5s ease-out;
-            box-shadow: 5px 5px 5px black;
-            border-radius: 3px;
-        }
-        .enquiry #enquiryclick:hover{
-            background-position: right bottom;
-            cursor: pointer;
-        }
-        .slideanim {                    
-            animation: slide 2s;
-        }
-        @keyframes slide {
-            0% {
-                opacity: 0;
-                transform: translateY(70%);
-            } 
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            } 
-        }
-    }
+    }    
