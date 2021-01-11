@@ -1274,7 +1274,7 @@
             font-size: 0.75em;
         }
         #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 0px rgb(201, 196, 196);
+            box-shadow: 0 0 0 rgb(201, 196, 196);
             color:black;
             width: 90%;
             display: grid;
