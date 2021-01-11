@@ -1109,6 +1109,9 @@
             font-size:1em;
             margin-left: 0;
         }
+        #Errorpage{
+            padding:0;
+        }
         #Errorpage h1{
             font-size: 2em;
         }
@@ -1127,87 +1130,146 @@
         .footer .footercontents .abt p{
             font-size: 1.25em;
         }
-
-
-
-
-
-
-        #Contact {
-            padding: 0;
+        #Key_Projects {
+            height: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-size: 1em;
-        }
-        #Contact .contactcontents {
+            padding: 0;
             margin: 0;
-            float: none;
-            display: inline;
-            padding: 10%;
-        }
-        #Contact .contactcontents form {
-            padding-right: 10vw;
-            padding-left: 10vw;
-        }
-        #Contact .contactcontents .contactothers {
-            text-align: center;
-            display: table;
-            height: 200px;
-            width: 100%;
-        }
-        #About {
-            height: 100%;
-        }
-        #About .aboutcontents {
             width: 100vw;
-        }
-        #About .aboutcontents div {
-            border-bottom: 3px solid #000;
-            float: none;
-            align-items: center;
-            height: auto;
-            width: 90%;
-            padding-bottom: 10%;
-        }
-        #About .aboutcontents div:last-child {
-            border-bottom: 0;
-        }
-        #About .aboutcontents div img {
-            padding-top: 1px;
-        }
-        #About .aboutcontents div h5 {
-            margin-bottom: 0px;
-            margin-top: 5px;
-            font-size: 1.5em;
-            text-align: center;
-            color: white;
-        }
-        #Key_Projects {
-            padding: 0px;
-            margin: 0;
+        }    
+        #Key_Projects .heading{
+            height:40vh;
+            font-size: 1.25em;
         }
         #Key_Projects .keyprojectscontents {
-            margin-top: 5vh;
-            display: grid;
-            grid-template-columns: 80vw;
-        }
+            margin:5vh 13%;
+            grid-template-columns: 100%;
+        }    
         #Key_Projects .keyprojectscontents .card {
-            margin-bottom: 5vh;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            background-color: white;
-            max-width: 300px;
-            float: none;
+            margin-bottom: 2vh;
+            width: 100%;
+            height:min-content;
+            box-shadow: 0px 0px 2px black;
+        }  
+        #Key_Projects .keyprojectscontents .card:hover{
+            box-shadow: none;
+        }  
+        #Key_Projects .keyprojectscontents .card img{
+            width: 100%;
+            height: 200px;
+        }    
+        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
+            text-align: left;
+            padding:10px 10px;
+            margin: 0;
+        }
+        #Key_Projects .keyprojectscontents .card h3{
+            font-size: 1em;
+            margin:0;
+        }
+        #Key_Projects .keyprojectscontents .card p{
+            font-size: 0.75em;
+            padding-top:0;
+        }
+        #Client .clientheading{
+            height:40vh;                
+            font-size: 1.25em;
+        }
+        #Client .clientcontents{
+            width:100%;
+            height:110vh;
+            margin:2% 0%;
+            grid-template-columns: 5% 90% 5%;
+        }
+        #Client .clientcontents .clientul{
+            padding:0;
+            margin: 0;
+            display: block;
+            width:100%;
+        }
+        #Client .clientcontents .prev1,#Client .clientcontents .next1{
             color: black;
-            justify-self: center;
+            z-index:100;
+            font-weight: bold;
         }
-        #Key_Projects .keyprojectscontents .card img {
-            width: 70%;
-            height: 248px;
+        #Client .clientcontents .prev1{
+            justify-self: left;
         }
-
- 
+        #Client .clientcontents .next1{
+            justify-self: right;
+        }
+        #Client .clientcontents .clientul .clientSlides{
+            height:100%;
+            min-height: min-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
+            margin:0;
+            width: 80%;
+            height: min-content;
+            padding:10px 10px;
+            min-height: min-content;
+            box-shadow: 0 0 0px gray;
+            display: flex;
+            font-size: 0.75em;
+            border-bottom:3px solid black;
+            float:none;
+        }
+        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:last-child{
+            border-bottom:0;
+        }
+        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
+            box-shadow: 0;
+        }
+        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
+            text-align: center;
+        }
+        #Careers .careerheading{
+            height:40vh;        
+            font-size: 1.25em;
+        }
+        #Careers .careerscontents {
+            margin: 0 13%;
+            height:110vh;
+        }
+        #Careers .careerscontents form{
+            width: 100%;
+        }    
+        #Careers .careerscontents form select{
+            font-size: 0.75em;
+            margin-top: 1vh;
+            padding:7px;
+        } 
+        #Careers .careerscontents form input{
+            width: 94%;
+            margin-top: 1vh;
+            font-size: 0.75em;
+            padding:7px;
+        }      
+        #Careers .careerscontents form div {
+            padding-bottom: 5vh;
+        }    
+        #Careers .careerscontents form div label {
+            margin-bottom: 1vh;
+            font-size: 1em;
+        }    
+        #Careers .careerscontents form #submit {
+            text-align: center;
+        }    
+        #Careers .careerscontents form #submit button {
+            padding: 4% 10%;
+            background-color: transparent;
+            font-weight: 100;
+            font-size: 1em;
+            box-shadow: 2px 2px 1px black;
+        }    
+        #Careers .careerscontents form #submit button h4 {
+            margin: 0;
+        }   
     
 
 
@@ -1215,192 +1277,9 @@
 
 
 
-    #Key_Projects {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-    }    
-    #Key_Projects .heading{
-        height:30vh;
-        text-transform: capitalize;
-        background-color: #4062da;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-    }
-    #Key_Projects .keyprojectscontents {
-        margin:10vh 20%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }    
-    #Key_Projects .keyprojectscontents .card {
-        margin-bottom: 10vh;
-        background-color: white;
-        width: 90%;
-        text-align: center;
-        float: left;
-        color: black;
-        justify-self: center;
-        height:500px;
-    }  
-    #Key_Projects .keyprojectscontents .card:hover{
-        box-shadow: 2px 2px 6px black;
-    }  
-    #Key_Projects .keyprojectscontents .card img{
-        width: 100%;
-        height: 248px;
-    }    
-    #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-        text-align: left;
-        padding:10px 20px;
-        margin: 0;
-    }
-    #Key_Projects .keyprojectscontents .card h3{
-        color: #4062da;
-        font-size: 1.5em;
-        padding-bottom:0;
-        margin-top: 20px;
-    }
-    #Client{
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-    }
-    #Client .clientheading{
-        height:40vh;                
-        background-color: #4062da;
-        font-size: 2em;
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #Client .clientheading .head1{
-        text-align: center;
-    }
-    #Client .clientheading .head1 p{
-        text-transform: uppercase;
-        font-size: 0.75em;
-    }
-    #Client .clientcontents{
-        width:70%;
-        height:40vh;
-        margin:2% 15%;
-        display:grid;
-        grid-template-columns: 5% 90% 5%;
-        justify-items: center;
-        align-items: center;
-    }
-    #Client .clientcontents .clientul{
-        padding:0;
-        color:black;
-        margin: 0;
-    }
-    #Client .clientcontents .prev1,#Client .clientcontents .next1{
-        color: black;
-        box-shadow: 0;
-        border-radius: 100%;
-        outline: 0;
-        border: 0;
-        height: 20px;
-        width: 20px;
-        cursor: pointer;
-    }
-    #Client .clientcontents .clientul .clientSlides{
-        display: flex;
-        height:100%;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-        margin:20px 20px;
-        padding:20px 20px;
-        min-height: 30vh;
-        background-color: white;
-        box-shadow: 0px 0px 10px gray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-        box-shadow: 0px 0px 10px black;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-        text-align: center;
-    }
-    .doublequotes{
-        font-size: 1.5em;
-    }
-    #Careers{
-        height: 100%;
-        overflow-y: hidden;
-        width: 100%;
-        margin: 0;
-        padding:0;
-    }    
-    #Careers .careerheading{
-        height:30vh;        
-        background-color: #4062da;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-    }
-    #Careers .careerscontents {
-        display: flex;
-        height:55vh;
-        justify-content: center;
-        align-items: center;
-        color:black;
-    }
-    #Careers .careerscontents form{
-        width: 100%;
-    }    
-    #Careers .careerscontents form select{
-        width:100%;
-        font-size: 1em;
-        padding:10px;
-    } 
-    #Careers .careerscontents form input{
-        width: 94%;
-        font-size: 1em;
-        padding:10px;
-    }      
-    #Careers .careerscontents form div {
-        padding-bottom: 2vh;
-    }    
-    #Careers .careerscontents form div label {
-        padding-bottom: 1vh;
-        font-size: 1.25em;
-    }    
-    #Careers .careerscontents form #submit {
-        text-align: center;
-    }    
-    #Careers .careerscontents form #submit button {
-        padding: 2% 10%;
-        font-size: 1em;
-        background-color: transparent;
-        font-weight: 300;
-        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-        color: white;
-        font-size: 1.25em;
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: all .5s ease-out;
-        box-shadow: 5px 5px 5px black;
-        width: 100%;
-    }    
-    #Careers .careerscontents form #submit button:hover{
-        background-position: right bottom;
-        cursor: pointer;
-    }
-    #Careers .careerscontents form #submit button h4 {
-        margin: 0;
-    }   
+    
+    
+    
     #Contact{
         height: 100%;
         overflow-y: hidden;
