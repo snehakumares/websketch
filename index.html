@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jqueryscript.js"></script>
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
@@ -27,7 +29,7 @@
         <a onclick="openPage('Careers','topnav','CAREERS')">CAREERS</a>
         <a onclick="openPage('Contact','topnav','CONTACT US')">CONTACT US</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            <img src="assets/icons/menu.png">
         </a>
     </div>
     <div class="tabnav" id="myTabnav">
@@ -168,7 +170,7 @@
             </div>
         </div>
          <div class="check1">
-            <p><br><a onclick="openPage('Errorpage','tabnav')" target="_blank"><button>Read the musing of our TechHub Community</button></a></p>
+            <p><br><a onclick="openPage('Errorpage','tabnav','404')" target="_blank"><button>Read the musing of our TechHub Community</button></a></p>
         </div>
         <div class="check2">
             <p> Are We Liked? Check out what our clients are sayings <button onclick="openPage('Client','none','CLIENT TESTIMONIAL')">Our Clients <span style="font-size: small;">&#10095;</span></button></p>
