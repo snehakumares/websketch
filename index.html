@@ -1,2512 +1,498 @@
-    html {
-        font-family: 'Roboto Mono', monospace;
-    }    
-    body {
-        margin: 0;
-        padding: 0;
-        width:100vw;
-        overflow-x: hidden;
-    }    
-    html,body{
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden; 
-    }
-    .nav{
-        height:0px;
-        background-color: black;
-    }
-    .tabnav{
-        width:100vw;
-        height:75px;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position:sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    /*.sticky {
-        position: fixed;
-        z-index: 10;
-        top: 0;
-      }
-    .sticky + .tabcontent {
-        padding-top: 75px;
-      } */    
-    .tabnav .tablink {
-        color:white;
-        background-color:black;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        font-size: 15px;
-        min-width: 4%;
-        font-weight: 500;
-        padding:0 20px;
-        letter-spacing:.15em;
-        text-decoration: none;
-        height: fit-content;
-        position: relative;
-        text-align: center;
-    }  
-    .tabnav .tablink:after{
-        bottom:0;
-        content:"";
-        height:2px;
-        left:0%;
-        position:absolute;
-        top:30px;
-        background:#4062da;
-        transition:width .3s ease 0s,left .3s ease 0s;
-        width:0;
-    }
-    .tabnav .tablink:hover:after{
-        width: 100%;
-        left:0;
-    }    
-    .topnav {
-        position:sticky;
-        z-index: 1000;
-        color:white;
-        background-color: black;
-        display: none;
-    }    
-    .tabnav .tablink:hover {
-        cursor: pointer;
-    }  
-    #logo{
-        height : 50px;
-        width:auto;
-        padding: 12px 0;
-    }
-    #logoname{  
-        padding: 0;
-        min-width:5%;
-    }
-    #logoname{
-        height:30px;
-        padding: 0 20px 0 0;
-    }
-    #logoname:hover{
-        cursor: default;
-    }  
-    .tabcontent {
-        color: white;
-        display: none;
-        padding: 40px 20px;
-        height: 100%;
-    }    
-    .topnav a{
-        cursor: pointer;
-    }
-    #Home {
-        height: 100%;
-        padding:0;
-        margin-top: 0;
-    }  
-    .banner{
-        height:100vh;
-        background-image: url("assets/home_banner/img6.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: rgba(0, 0, 0, 0.5);
-        background-blend-mode: darken;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .bannercontent{
-        width:80vw;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-    #home1{
-        font-size: 2em;
-        height:45px;
-        animation: show 1s;
-    }        
-    #home2{
-        font-size: 3em;
-        font-weight: 500;
-        margin-top:10px;
-        height:180px;
-        animation: show 1s;
-    }
-    #home3{
-        font-size: 1.5em;
-        height:30px;
-        display: block;
-        margin-top:50px;
-        
-    }
-    #home3 .line{
-        font-size: 1.25em;
-        height:50px;
-    }    
-    .animated-text{
-        color: #fff;
-        transform: translate(0%,-50%);
-        height: 30px;
-        overflow: hidden;
-    }    
-    .line:first-child{
-        animation: anim 12s infinite;
-    }
-    @keyframes show{
-        0%{
-            transform: translateY(20%);
-            transform-origin: left top;
-       }
-        100%{
-            transform: translateY(0%);
-        } 
-    }
-    @keyframes anim {
-        0%{
-          margin-top: 0;
-        }
-        16%{
-          margin-top: -55px;
-        }
-        33%{
-          margin-top: -105px;
-        }
-        50%{
-          margin-top: -155px;
-        }
-        66%{
-          margin-top: -105px;
-        }
-        82%{
-          margin-top: -55px;
-        }
-        100%{
-          margin-top: 0;
-        }
-      }
-    .about{
-        height:92vh;
-        color:black;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 15%;
-        margin-right: 15%;
-    }   
-    .about .aboutcompany{
-        margin-right: 15%;
-    }
-    .about .aboutcompany h3{
-        font-size: 2em;
-        color: #4062da;
-    }
-    .about .aboutimage img{
-        width:300px;
-        height:300px;
-        border-radius: 500%;
-    }
-    .serv_proj{
-        height:185vh;
-        position:relative;
-    }
-    .services{
-        height:155vh;
-        position:relative;
-        background:linear-gradient( white 0.5%,#07164e 0.5%);
-        background-position-y: 7vh;
-        background-repeat: no-repeat;
-    }
-    .services .worksofar{
-        margin:0 15%;
-        height: 15vh;
-        width: 100%;
-    }
-    .services .worksofar #item1{
-        background-image: url("assets/home_banner/img2.jfif");
-    }
-    .services .worksofar #item2{
-        background-image: url("assets/home_banner/img3.jfif");
-    }
-    .services .worksofar #item3{
-        background-image: url("assets/home_banner/img4.jpeg");
-    }
-    .services .worksofar #item4{
-        background-image: url("assets/home_banner/img5.jpg");
-    }
-    .services .worksofar .item{
-        width:13.75%;
-        margin-right:5%;
-        float: left;
-        z-index: 2;
-        height:15vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: rgba(0, 0, 0, 0.4);
-        background-blend-mode: darken;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .services .worksofar .item p{
-        font-weight: bold;
-    }
-    .services .worksofar .item:last-child{
-       margin-right: 0;
-    }
-    .services .worksofar .item:hover{
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-   .serv{
-       height:100vh;
-       width:100%;
-       position:absolute;
-       top:12%;
-   }
-   .serv h4{
-       text-align: center;
-       font-size: 1.75em;
-   }
-   .serv h2{
-        font-size: 3em;
-        text-align: center;
-        margin-bottom: 7vh;
-   }
-   .serv .servitems{
-        margin: 0 15%;
-        display:grid;
-        height:80%;
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 50% 50%;
-   }
-   .serv .servitems .servitem{
-        height:35vh;
-        width:75%;
-        justify-content: center;
-        align-content: center;
-        margin-right: 2%;
-        float:left;
-        color: black;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        align-self: center;
-        justify-self: center;
-        transform-origin: bottom;
-        box-shadow: 0 0 5px black;
-        transition: all .2s ease-in;
-        transform-origin: center bottom;
-   }
-   .serv .servitems .servitem:hover{
-       background-color: #4062da;
-        color:white;
-   }
-   .serv .servitems .servitem h3{
-        text-align: center;
-        padding:0 10px;
-    } 
-    .serv .servitems .servitem p{
-        padding:20px;
-        font-size: 0.75em;
-    }
-    .projects{
-        height:50vh;
-        width:70%;
-        margin:0% 15%;
-        text-align: center;
-        padding:0;
-        position: absolute;
-        top:75%;
-        left:0%;
-        border-radius: 25px;
-        background-image: url("assets/home_banner/img7.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: rgba(0, 0, 0, 0.5);
-        /*background-color: rgba(33, 55, 135, 0.4);*/
-        background-blend-mode: darken;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .projects .projectitems{
-        display:grid;
-        grid-template-columns: 35% 70%;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 95%;
-    }
-    .projects .projectitems .head h2{
-        margin:0;
-        font-size: 2em;
-    }
-    .projects .projectitems .projectContents{
-        height:100%;
-        width:100%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .projects .projectitems .projectContents .projectul{
-        padding:0;
-        color:white;
-        position: absolute;
-        width:70%;
-        font-size: 1em;
-    }
-    .projects .projectitems .projectContents .projectul .mySlides h3{
-        font-size: 1.25em;
-    }
-    .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-        position:absolute;
-        top:50%;
-        background-color: black;
-        color: white;
-        box-shadow: 0;
-        outline: 0;
-        border: 0;
-        padding:10px;
-        box-shadow: 0 0 1px gray;
-    }
-    .projects .projectitems .projectContents .prev{
-        left:7%;
-    }
-    .projects .projectitems .projectContents .next{
-        right:7%;
-    }
-    .check{
-        margin-top:5%;
-        height:50px;
-        width:100%;
-        text-align: center;
-        color:white;
-        font-size: 1.25em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    .check p:hover{
-        cursor: pointer;
-    }
-    .check p a:after{
-        bottom:0;
-        content:"";
-        display:block;
-        height:3px;
-        left:15%;
-        position:absolute;
-        background:#4062da;;
-        transition:width .3s ease 0s,left .3s ease 0s;
-        width:0;
-    }
-    .check p a:hover:after{
-        width:70%;
-        left:15%;
-    }
-    .check1 p a button{
-        padding:8px 60px;
-        border:0;
-        font-size: 1em;
-        color: white;
-        outline: 0;
-        background: linear-gradient(115deg, #07164e 48%, #4062da 48%);
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: all .5s ease-out;
-        box-shadow: 5px 5px 5px black;
-        border-radius: 3px;
-        font-family: 'Roboto Mono', monospace;
-        align-items: center;
-    }
-    .check1 p a button:hover {
-        background-position: right bottom;
-        cursor: pointer;
-      }
-    .check1{
-        margin-top:5%;
-        height:50px;
-        width:100%;
-        color:black;
-        font-size: 1.25em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .check1 p a{
-        text-decoration: none;
-        color: black;
-        transition: all .5s ease-out;
-    }
-    .check2{
-        margin-top:5%;
-        height:200px;
-        width:100%;
-        color:black;
-        font-size: 1.25em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .check2 p button{
-        padding:5px 40px;
-        font-size:1em;
-        border:0;
-        box-shadow: 0;
-        color: white;
-        outline: 0;
-        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: all .5s ease-out;
-        box-shadow: 3px 3px 4px gray;
-        margin-left: 10px;
-        font-family: 'Roboto Mono', monospace;
-    }
-    .check2 p button:hover {
-        background-position: right bottom;
-        cursor: pointer;
-      }
-    #Errorpage{
-        height:75vh;
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
-        flex-direction: column;
-    }
-    #Errorpage h1{
-        font-size: 5em;
-        margin:0;
-    }
-    #Errorpage h3{
-        font-size: 3em;
-        margin: 0;
-    }
-    .footer{
-        height:58vh;
-        width:100vw;
-        background-color:#07164e;
-        padding:0 15%;
-        display: grid;
-        grid-template-columns: 25% 25% 15%;
-    }
-    .footer .footercontents{
-        justify-content: center;
-        align-self: center;
-        justify-self: center;
-    }
-    .footer .footercontents p{
-        margin:10px 0;
-    }
-    .footer .footercontents a{
-        cursor: pointer;
-    }
-    .footer .footercontents .abt{
-        display:grid;
-        grid-template-columns: 20% 80%;
-        justify-content: center;
-        align-content: center;
-    }
-    .footer .footercontents .abt p{
-        width:max-content;
-        height: auto;
-        font-size: 1.75em;
-    }
-    .footer .footercontents img{
-        margin-right: 15px;
-        width:27px;
-        height: auto;
-        margin-top:5px;
-    }
-    .footer .footercontents .abt img{
-        width:80%;
-        height:auto;
-        align-self: center;
-    }
-    .footer .footercontents .footercontact{
-        display: grid;
-        grid-template-columns: 13% 87%;
-        align-items: center;
-    }  
-    #Key_Projects {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-    }    
-    #Key_Projects .heading{
-        height:30vh;
-        text-transform: capitalize;
-        background-color: #4062da;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-    }
-    #Key_Projects .keyprojectscontents {
-        margin:10vh 20%;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }    
-    #Key_Projects .keyprojectscontents .card {
-        margin-bottom: 10vh;
-        background-color: white;
-        width: 90%;
-        text-align: center;
-        float: left;
-        color: black;
-        justify-self: center;
-        height:500px;
-    }  
-    #Key_Projects .keyprojectscontents .card:hover{
-        box-shadow: 2px 2px 6px black;
-    }  
-    #Key_Projects .keyprojectscontents .card img{
-        width: 100%;
-        height: 248px;
-    }    
-    #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-        text-align: left;
-        padding:10px 20px;
-        margin: 0;
-    }
-    #Key_Projects .keyprojectscontents .card h3{
-        color: #4062da;
-        font-size: 1.5em;
-        padding-bottom:0;
-        margin-top: 20px;
-    }
-    #Client{
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-    }
-    #Client .clientheading{
-        height:40vh;                
-        background-color: #4062da;
-        font-size: 2em;
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #Client .clientheading .head1{
-        text-align: center;
-    }
-    #Client .clientheading .head1 p{
-        text-transform: uppercase;
-        font-size: 0.75em;
-    }
-    #Client .clientcontents{
-        width:70%;
-        height:40vh;
-        margin:2% 15%;
-        display:grid;
-        grid-template-columns: 5% 90% 5%;
-        justify-items: center;
-        align-items: center;
-    }
-    #Client .clientcontents .clientul{
-        padding:0;
-        color:black;
-        margin: 0;
-    }
-    #Client .clientcontents .prev1,#Client .clientcontents .next1{
-        color: black;
-        box-shadow: 0;
-        border-radius: 100%;
-        outline: 0;
-        border: 0;
-        height: 20px;
-        width: 20px;
-        cursor: pointer;
-    }
-    #Client .clientcontents .clientul .clientSlides{
-        display: flex;
-        height:100%;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-        margin:20px 20px;
-        padding:20px 20px;
-        min-height: 30vh;
-        background-color: white;
-        box-shadow: 0px 0px 10px gray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-        box-shadow: 0px 0px 10px black;
-    }
-    #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-        text-align: center;
-    }
-    .doublequotes{
-        font-size: 1.5em;
-    }
-    #Careers{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding:0;
-    }    
-    #Careers .careerheading{
-        height:30vh;        
-        background-color: #4062da;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-    }
-    #Careers .careerscontents {
-        display: flex;
-        height:55vh;
-        justify-content: center;
-        align-items: center;
-        color:black;
-    }
-    #Careers .careerscontents form{
-        width: 100%;
-    }    
-    #Careers .careerscontents form select{
-        width:100%;
-        font-size: 1em;
-        padding:10px;
-    } 
-    #Careers .careerscontents form input{
-        width: 94%;
-        font-size: 1em;
-        padding:10px;
-    }      
-    #Careers .careerscontents form div {
-        padding-bottom: 2vh;
-    }    
-    #Careers .careerscontents form div label {
-        padding-bottom: 1vh;
-        font-size: 1.25em;
-    }    
-    #Careers .careerscontents form #submit {
-        text-align: center;
-    }    
-    #Careers .careerscontents form #submit button {
-        padding: 2% 10%;
-        font-size: 1em;
-        background-color: transparent;
-        font-weight: 300;
-        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-        color: white;
-        font-size: 1.25em;
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: all .5s ease-out;
-        box-shadow: 5px 5px 5px black;
-        width: 100%;
-    }    
-    #Careers .careerscontents form #submit button:hover{
-        background-position: right bottom;
-        cursor: pointer;
-    }
-    #Careers .careerscontents form #submit button h4 {
-        margin: 0;
-    }   
-    #Contact{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding:0;
-    }    
-    #Contact .contactheading{
-        height:30vh;
-        background-color: #4062da;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-    }
-    #Contact .contactcontents{
-        margin:0 30%;
-        height:20vh;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    #Contact .contactcontents .contactitem{
-        box-shadow: 0 0 30px rgb(201, 196, 196);
-        color:black;
-        width: 90%;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        height: 40%;
-        padding:5% 0%;
-        justify-items: center;
-        align-content: center;
-        justify-self: center;
-        align-self: end;
-        background-color: #07164e;
-        color: white;
-    }
-    #Contact .contactcontents .contactitem .contacticon{
-        align-self: center;
-    }
-    #Contact .contactcontents .contactitem .contactdetails{
-        justify-self: self-start;
-    }
-    .modal {
-        background-color: rgb(172, 165, 165,0.8);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-    }   
-    .modal .modalcontent {
-        background-color: white;
-        height:50%;
-        width:25%;
-    }
-    .modal .modalcontent .modalitems {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin:0;
-        margin-top:15%;
-    }
-    .modal .modalcontent .close {
-        float: right;
-        left: 2%;
-        cursor: pointer;
-        color: black;
-        font-weight: bold;
-        padding:5px 7px;
-        margin-right: 10px;
-        border-radius: 100%;
-    }
-    .modal .modalcontent .modalitems form div {
-        padding-bottom: 2vh;
-        font-size: 1.25em;
-        color: black;
-    }
-    .modal .modalcontent .modalitems form div input{
-        padding:6px;
-    }
-    .modal .modalcontent .modalitems form div textarea {
-        width:100%;
-    }
-    .modal .modalcontent .modalitems form .submitbutton {
-        text-align: center;
-        padding-top: 2vh;
-    }
-    .modal .modalcontent .modalitems form .submitbutton button {
-        text-align: center;
-        background-color: #4062da;
-        color: white;
-        font-weight: bold;
-        padding: 5%;
-        padding-left: 7%;
-        padding-right: 7%;
-        outline: none;
-        box-shadow: none;
-        border: none;
-        cursor: pointer;
-        width:100%;
-    }
-    .enquiry{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:20vh;
-    }
-    .enquiry #enquiryclick{
-        padding:10px 30px;
-        box-shadow: 0;
-        border:0;
-        background: linear-gradient(115deg, #07164e 45%, #4062da 45%);
-        color: white;
-        font-size: 1.25em;
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: all .5s ease-out;
-        box-shadow: 5px 5px 5px black;
-        border-radius: 3px;
-    }
-    .enquiry #enquiryclick:hover{
-        background-position: right bottom;
-        cursor: pointer;
-    }
-    .slideanim {                    
-        animation: slide 2s;
-    }
-    @keyframes slide {
-        0% {
-            opacity: 0;
-            transform: translateY(70%);
-        } 
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        } 
-    }
+<!DOCTYPE html>
 
-    @media (max-width:424px) {
-        html{
-            width: 100vw;
-            overflow-x: hidden;
-        }
-        body{
-            width: 100vw;
-        }
-        .nav{
-            height:0px;
-            background-color: #242038ff;
-        }
-        .tabnav {
-            display: none;
-        }
-        .topnav {
-            display: table;
-            width: 100%;
-            background-color: black;
-        }
-        .topnav a {
-            background-color:black;
-            color:white;
-            float: left;
-            display: block;
-            text-align: center;
-            padding: 12px 16px;
-            text-decoration: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .topnav a img{
-            height:15px;
-            width: auto;
-        }
-        .topnav a:not(:first-child) {
-            display: none;
-        }
-        .topnav a.icon {
-            float: right;
-            display: block;
-            background-color:black;
-            color:white;
-        }
-        .topnav.responsive {
-            position: relative;
-        }
-        .topnav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-        .banner{
-            height:95vh;
-        }
-        .bannercontent{
-            width:100%;
-            margin-left: 13%;
-            margin-right: 13%;
-        }
-        #home1{
-            font-size: 1em;
-            height:30px;
-        } 
-        #home2{
-            font-size: 1.25em;
-            margin-top:15%;
-            height:120px;
-        }
-        #home3{
-            display: none;
-        }
-        .about{
-            height:110vh;
-            color:black;
-            margin-left: 13%;
-            margin-right: 13%;
-        }   
-        .about .aboutcompany{
-            margin-right: 0;
-        }
-        .about .aboutcompany h3{
-            font-size: 1.25em;
-            text-align: center;
-        }
-        .about .aboutimage img{
-            display: none;
-        }
-        .serv_proj{
-            height:100%;
-            position: static;;
-        }
-        .services{
-            height:100%;
-            position: static;;
-            background:linear-gradient(white 26.7%,#07164e 26.7%);
-        }
-        .services .worksofar{
-            margin:2% 0%;
-        }
-        .services .worksofar .item{
-            width:100%;
-            margin-right:0%;
-            margin-bottom: 2%;
-            z-index: 2;
-            height:24vh;
-            flex-direction: column;
-        }
-        .serv{
-            height:100%;
-            width:100%;
-            position:static;
-            top:0%;
-        }
-        .serv h4{
-            margin-top: 90vh;
-            font-size: 1em;
-        }
-        .serv h2{
-                font-size: 1.25em;
-                margin-bottom: 2vh;
-        }
-        .serv .servitems{
-                margin: 10% 13% 0 13%;
-                display:grid;
-                height:100%;
-                grid-template-columns: 100%;
-                grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
-        }
-        .serv .servitems .servitem{
-                height:30vh;
-                width:100%;
-                margin-bottom: 2vh;
-                margin-right: 0;
-                float:none;
-        }
-        .serv .servitems .servitem h3{
-                font-size: 1em;
-            } 
-        .serv .servitems .servitem p{
-            padding:10px;
-            font-size: 0.75em;
-        }
-        .projects{
-            height:100vh;
-            width:100%;
-            margin:0% 0%;
-            padding:0;
-            position: static;
-            left:0%;
-            border-radius: 0%;
-            background-color: #4062da;
-            background-image: none;
-            display: block;
-        }
-        .projects .projectitems{
-            display:grid;
-            grid-template-rows: 40% 60%;
-            grid-template-columns: 100%;
-            height: 100%;
-            width: 100%;
-        }
-        .projects .projectitems .head h2{
-            margin:0;
-            font-size: 1.5em;
-        }
-        .projects .projectitems .projectContents{
-            min-height: 600px;
-            width:100%;
-            align-self: self-end;
-        }
-        .projects .projectitems .projectContents .projectul{
-            color: black;
-            padding:0;
-            position: static;
-            width:100%;
-            font-size: 1em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides{
-            background-color: white;
-            border-radius: 25px;
-            padding:2% 2%;
-            margin:0 13%;
-            font-size: 0.75em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides h3{
-            font-size: 1.25em;
-        }
-        .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-            position: absolute;
-            top:50%;
-            background-color: #07164e;
-            padding:5px;
-        }
-        .projects .projectitems .projectContents .prev{
-            left:0%;
-        }
-        .projects .projectitems .projectContents .next{
-            right:0%;
-        }
-        .check{
-            margin-top:0%;
-            height:50px;
-            width:100%;
-            font-size: 1.25em;
-        }
-        .check p a:after{
-            bottom:0;
-            content:"";
-            display:block;
-            height:3px;
-            left:15%;
-            position:absolute;
-            background:white;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .check p a:hover:after{
-            width:70%;
-            left:15%;
-        }
-        .check1 p a button{
-            padding:2px 10px;
-            font-size: 0.75em;
-        }
-        .check2{
-            margin-top:2% 3%;
-            height:150px;
-            width:100%;
-            text-align: center;
-            color:black;
-        }
-        .check2 p{
-            font-size: 0.75em;
-            margin:0;
-        }
-        .check2 p button{
-            margin-top: 10px;
-            padding:3px 40px;
-            font-size:1em;
-            margin-left: 0;
-        }
-        #Errorpage{
-            padding:0;
-        }
-        #Errorpage h1{
-            font-size: 2em;
-        }
-        #Errorpage h3{
-            font-size: 1em;
-        }
-        .footer{
-            height:100vh;
-            width:100vw;
-            padding:0 13%;
-            grid-template-columns: 74%;
-        }
-        .footer .footercontents p{
-            font-size: 1em;
-        }      
-        .footer .footercontents .abt p{
-            font-size: 1.25em;
-        }
-        #Key_Projects {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }    
-        #Key_Projects .heading{
-            height:40vh;
-            font-size: 1.25em;
-        }
-        #Key_Projects .keyprojectscontents {
-            margin:5vh 13%;
-            grid-template-columns: 100%;
-        }    
-        #Key_Projects .keyprojectscontents .card {
-            width: 100%;
-            height:min-content;
-            box-shadow: 0px 0px 2px black;
-            margin-bottom: 5vh;
-        }  
-        #Key_Projects .keyprojectscontents .card:hover{
-            box-shadow: 0px 0px 4px black;
-        }  
-        #Key_Projects .keyprojectscontents .card img{
-            width: 100%;
-            height: 200px;
-        }    
-        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-            text-align: left;
-            padding:10px 10px;
-            margin: 0;
-        }
-        #Key_Projects .keyprojectscontents .card h3{
-            font-size: 1em;
-            margin:0;
-        }
-        #Key_Projects .keyprojectscontents .card p{
-            font-size: 0.75em;
-            padding-top:0;
-        }
-        #Client .clientheading{
-            height:40vh;                
-            font-size: 1.25em;
-        }
-        #Client .clientcontents{
-            width:100%;
-            height:110vh;
-            margin:2% 0%;
-            grid-template-columns: 10% 80% 10%;
-        }
-        #Client .clientcontents .clientul{
-            padding:0;
-            margin: 0;
-            display: block;
-            width:100%;
-        }
-        #Client .clientcontents .prev1,#Client .clientcontents .next1{
-            color: black;
-            z-index:100;
-            font-weight: bold;
-        }
-        #Client .clientcontents .clientul .clientSlides{
-            height:100%;
-            min-height: min-content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-            margin:0;
-            width: 80%;
-            height: min-content;
-            padding:10px 10px;
-            min-height: min-content;
-            box-shadow: 0 0 0px gray;
-            display: flex;
-            font-size: 0.75em;
-            border-bottom:3px solid black;
-            float:none;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:last-child{
-            border-bottom:0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-            box-shadow: 0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-            text-align: center;
-        }
-        #Careers .careerheading{
-            height:40vh;        
-            font-size: 1.25em;
-        }
-        #Careers .careerscontents {
-            margin: 0 13%;
-            height:110vh;
-        }
-        #Careers .careerscontents form{
-            width: 100%;
-        }    
-        #Careers .careerscontents form select{
-            font-size: 0.75em;
-            margin-top: 1vh;
-            padding:7px;
-            background-color: white;
-        } 
-        #Careers .careerscontents form input{
-            width: 94%;
-            margin-top: 1vh;
-            font-size: 0.75em;
-            padding:7px;
-        }      
-        #Careers .careerscontents form div {
-            padding-bottom: 5vh;
-        }    
-        #Careers .careerscontents form div label {
-            margin-bottom: 1vh;
-            font-size: 1em;
-        }    
-        #Careers .careerscontents form #submit {
-            text-align: center;
-        }    
-        #Careers .careerscontents form #submit button {
-            padding: 4% 10%;
-            background-color: transparent;
-            font-weight: 100;
-            font-size: 1em;
-            box-shadow: 2px 2px 1px black;
-        }    
-        #Careers .careerscontents form #submit button h4 {
-            margin: 0;
-        }    
-        #Contact .contactheading{
-            height:40vh;
-            font-size: 1.25em;
-        }
-        #Contact .contactcontents{
-            margin:10% 0% 2% 0%;
-            height:20vh;
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 50% 50%;
-            font-size: 0.75em;
-        }
-        #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 0 rgb(201, 196, 196);
-            color:black;
-            width: 90%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            height: 40%;
-            padding:5% 0%;
-            justify-items: center;
-            align-content: center;
-            justify-self: center;
-            align-self: end;
-            background-color: #07164e;
-            color: white;
-        }
-        .modal .modalcontent {
-            background-color: white;
-            height:50%;
-            width:90%;
-        }
-        .modal .modalcontent .modalitems{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal .modalcontent .modalitems form div {
-            padding-bottom: 2vh;
-            font-size: 1em;
-            color: black;
-        }
-        .enquiry{
-            height:15vh;
-        }
-        .enquiry #enquiryclick{
-            padding:5px 30px;
-            font-size: 1em;
-        }
-    }
-    @media (min-width:425px) and (max-width:767px) {
-        html{
-            width: 100vw;
-            overflow-x: hidden;
-        }
-        body{
-            width: 100vw;
-        }
-        .nav{
-            height:0px;
-            background-color: #242038ff;
-        }
-        .tabnav {
-            display: none;
-        }
-        .topnav {
-            display: table;
-            width: 100%;
-            background-color: black;
-        }
-        .topnav a {
-            background-color:black;
-            color:white;
-            float: left;
-            display: block;
-            text-align: center;
-            padding: 12px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            cursor: pointer;
-        }
-        .topnav a img{
-            height:15px;
-            width: auto;
-        }
-        .topnav a:not(:first-child) {
-            display: none;
-        }
-        .topnav a.icon {
-            float: right;
-            display: block;
-            background-color:black;
-            color:white;
-        }
-        .topnav.responsive {
-            position: relative;
-        }
-        .topnav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-        .banner{
-            height:95vh;
-        }
-        .bannercontent{
-            width:100%;
-            margin-left: 13%;
-            margin-right: 13%;
-        }
-        #home1{
-            font-size: 1.25em;
-            height:30px;
-        } 
-        #home2{
-            font-size: 1.5em;
-            margin-top:15%;
-            height:120px;
-        }
-        #home3{
-            display: none;
-        }
-        .about{
-            height:110vh;
-            color:black;
-            margin-left: 13%;
-            margin-right: 13%;
-        }   
-        .about .aboutcompany{
-            margin-right: 0;
-        }
-        .about .aboutcompany h3{
-            font-size: 1.25em;
-            text-align: center;
-        }
-        .about .aboutcompany p{
-            font-size: 0.85em;
-        }
-        .about .aboutimage img{
-            display: none;
-        }
-        .serv_proj{
-            height:100%;
-            position: static;;
-        }
-        .services{
-            height:100%;
-            position: static;;
-            background:linear-gradient(white 26.7%,#07164e 26.7%);
-        }
-        .services .worksofar{
-            margin:2% 0%;
-        }
-        .services .worksofar .item{
-            width:100%;
-            margin-right:0%;
-            margin-bottom: 2%;
-            z-index: 2;
-            height:24vh;
-            font-size: 1em;
-            flex-direction: column;
-        }
-        .serv{
-            height:100%;
-            width:100%;
-            position:static;
-            top:0%;
-        }
-        .serv h4{
-            margin-top: 90vh;
-            font-size: 1.25em;
-        }
-        .serv h2{
-                font-size: 1.5em;
-                margin-bottom: 2vh;
-        }
-        .serv .servitems{
-                margin: 10% 13% 0 13%;
-                display:grid;
-                height:100%;
-                grid-template-columns: 100%;
-                grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
-        }
-        .serv .servitems .servitem{
-                height:30vh;
-                width:85%;
-                margin-bottom: 2vh;
-                margin-right: 0;
-                float:none;
-                text-align: center;
-        }
-        .serv .servitems .servitem h3{
-                font-size: 1.1em;
-            } 
-        .serv .servitems .servitem p{
-            padding:10px;
-            font-size: 0.85em;
-        }
-        .projects{
-            height:100vh;
-            width:100%;
-            margin:0% 0%;
-            padding:0;
-            position: static;
-            left:0%;
-            border-radius: 0%;
-            background-color: #4062da;
-            background-image: none;
-            display: block;
-        }
-        .projects .projectitems{
-            display:grid;
-            grid-template-rows: 40% 60%;
-            grid-template-columns: 100%;
-            height: 100%;
-            width: 100%;
-        }
-        .projects .projectitems .head h2{
-            margin:0;
-            font-size: 1.75em;
-        }
-        .projects .projectitems .projectContents{
-            min-height: 600px;
-            width:100%;
-            align-self: self-end;
-        }
-        .projects .projectitems .projectContents .projectul{
-            color: black;
-            padding:0;
-            position: static;
-            width:100%;
-            font-size: 1em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides{
-            background-color: white;
-            border-radius: 25px;
-            padding:2% 2%;
-            margin:0 13%;
-            font-size: 0.85em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides h3{
-            font-size: 1.25em;
-        }
-        .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-            position: absolute;
-            top:50%;
-            background-color: #07164e;
-            padding:5px;
-        }
-        .projects .projectitems .projectContents .prev{
-            left:0%;
-        }
-        .projects .projectitems .projectContents .next{
-            right:0%;
-        }
-        .check{
-            margin-top:0%;
-            height:50px;
-            width:100%;
-            font-size: 1.15em;
-        }
-        .check p a:after{
-            bottom:0;
-            content:"";
-            display:block;
-            height:3px;
-            left:15%;
-            position:absolute;
-            background:white;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .check p a:hover:after{
-            width:70%;
-            left:15%;
-        }
-        .check1 p a button{
-            padding:5px 20px;
-            font-size: 0.85em;
-        }
-        .check2{
-            margin-top:2% 3%;
-            height:150px;
-            width:100%;
-            text-align: center;
-            color:black;
-        }
-        .check2 p{
-            font-size: 0.85em;
-            margin:0;
-        }
-        .check2 p button{
-            margin-top: 10px;
-            padding:3px 40px;
-            font-size:1em;
-            margin-left: 0;
-        }
-        #Errorpage{
-            padding:0;
-        }
-        #Errorpage h1{
-            font-size: 3em;
-        }
-        #Errorpage h3{
-            font-size: 2em;
-        }
-        .footer{
-            height:100vh;
-            width:100vw;
-            padding:0 13%;
-            grid-template-columns: 74%;
-        }
-        .footer .footercontents:first-child{
-            margin: 0 25%;
-        }
-        .footer .footercontents p{
-            font-size: 1em;
-        }      
-        .footer .footercontents .abt p{
-            font-size: 1.25em;
-        }
-        #Key_Projects {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }    
-        #Key_Projects .heading{
-            height:40vh;
-            font-size: 1.5em;
-        }
-        #Key_Projects .keyprojectscontents {
-            margin:5vh 13%;
-            grid-template-columns: 100%;
-        }    
-        #Key_Projects .keyprojectscontents .card {
-            width: 100%;
-            height:min-content;
-            box-shadow: 0px 0px 2px black;
-            margin-bottom: 5vh;
-        }  
-        #Key_Projects .keyprojectscontents .card:hover{
-            box-shadow: 0px 0px 4px black;
-        }  
-        #Key_Projects .keyprojectscontents .card img{
-            width: 100%;
-            height: 200px;
-        }    
-        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-            text-align: left;
-            padding:10px 10px;
-            margin: 0;
-        }
-        #Key_Projects .keyprojectscontents .card h3{
-            font-size: 1.25em;
-            margin:0;
-        }
-        #Key_Projects .keyprojectscontents .card p{
-            font-size: 0.85em;
-            padding-top:0;
-        }
-        #Client .clientheading{
-            height:40vh;                
-            font-size: 1.25em;
-        }
-        #Client .clientheading .head1 p{
-            font-size: 1em;
-        }
-        #Client .clientcontents{
-            width:100%;
-            height:110vh;
-            margin:2% 0%;
-            grid-template-columns: 10% 80% 10%;
-        }
-        #Client .clientcontents .clientul{
-            padding:0;
-            margin: 0;
-            display: block;
-            width:100%;
-        }
-        #Client .clientcontents .prev1,#Client .clientcontents .next1{
-            color: black;
-            z-index:100;
-            font-weight: bold;
-        }
-        #Client .clientcontents .clientul .clientSlides{
-            height:100%;
-            min-height: min-content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-            margin:0;
-            width: 80%;
-            height: min-content;
-            padding:10px 10px;
-            min-height: min-content;
-            box-shadow: 0 0 0px gray;
-            display: flex;
-            font-size: 0.85em;
-            border-bottom:3px solid black;
-            float:none;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:last-child{
-            border-bottom:0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-            box-shadow: 0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-            text-align: center;
-        }
-        #Careers .careerheading{
-            height:40vh;        
-            font-size: 1.25em;
-        }
-        #Careers .careerscontents {
-            margin: 0 13%;
-            height:110vh;
-        }
-        #Careers .careerscontents form{
-            width: 100%;
-        }    
-        #Careers .careerscontents form select{
-            font-size: 0.85em;
-            margin-top: 1vh;
-            padding:7px;
-            background-color: white;
-        } 
-        #Careers .careerscontents form input{
-            width: 94%;
-            margin-top: 1vh;
-            font-size: 0.85em;
-            padding:7px;
-        }      
-        #Careers .careerscontents form div {
-            padding-bottom: 5vh;
-        }    
-        #Careers .careerscontents form div label {
-            margin-bottom: 1vh;
-            font-size: 1em;
-        }    
-        #Careers .careerscontents form #submit {
-            text-align: center;
-        }    
-        #Careers .careerscontents form #submit button {
-            padding: 4% 10%;
-            background-color: transparent;
-            font-weight: 100;
-            font-size: 1em;
-            box-shadow: 2px 2px 1px black;
-        }    
-        #Careers .careerscontents form #submit button h4 {
-            margin: 0;
-        }    
-        #Contact .contactheading{
-            height:40vh;
-            font-size: 1.25em;
-        }
-        #Contact .contactcontents{
-            margin:10% 0% 2% 0%;
-            height:20vh;
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 50% 50%;
-            font-size: 0.85em;
-        }
-        #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 0 rgb(201, 196, 196);
-            color:black;
-            width: 90%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            height: 40%;
-            padding:5% 0%;
-            justify-items: center;
-            align-content: center;
-            justify-self: center;
-            align-self: end;
-            background-color: #07164e;
-            color: white;
-        }
-        .modal .modalcontent {
-            background-color: white;
-            height:50%;
-            width:90%;
-        }
-        .modal .modalcontent .modalitems{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal .modalcontent .modalitems form div {
-            padding-bottom: 2vh;
-            font-size: 1em;
-            color: black;
-        }
-        .enquiry{
-            height:15vh;
-        }
-        .enquiry #enquiryclick{
-            padding:10px 30px;
-            font-size: 1em;
-        }
-    }
-    
-    @media (min-width:768px) and (max-width:1023px) {
-        html{
-            width: 100vw;
-            overflow-x: hidden;
-        }
-        body{
-            width: 100vw;
-        }
-        .nav{
-            height:0px;
-            background-color: #242038ff;
-        }
-        .tabnav {
-            display: none;
-        }
-        .topnav {
-            display: table;
-            width: 100%;
-            background-color: black;
-        }
-        .topnav a {
-            background-color:black;
-            color:white;
-            float: left;
-            display: block;
-            text-align: center;
-            padding: 12px 16px;
-            text-decoration: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .topnav a img{
-            height:20px;
-            width: auto;
-        }
-        .topnav a:not(:first-child) {
-            display: none;
-        }
-        .topnav a.icon {
-            float: right;
-            display: block;
-            background-color:black;
-            color:white;
-        }
-        .topnav.responsive {
-            position: relative;
-        }
-        .topnav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .topnav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
-        .banner{
-            height:95vh;
-        }
-        .bannercontent{
-            width:100%;
-            margin-left: 13%;
-            margin-right: 13%;
-        }
-        #home1{
-            font-size: 1.5em;
-            height:30px;
-        } 
-        #home2{
-            font-size: 2em;
-            margin-top:15%;
-            height:120px;
-        }
-        #home3{
-            display: none;
-        }
-        .about{
-            height:110vh;
-            color:black;
-            margin-left: 13%;
-            margin-right: 13%;
-        }   
-        .about .aboutcompany{
-            margin-right: 0;
-        }
-        .about .aboutcompany h3{
-            font-size: 1.5em;
-            text-align: center;
-        }
-        .about .aboutcompany p{
-            font-size: 1.25em;
-        }
-        .about .aboutimage img{
-            display: none;
-        }
-        .serv_proj{
-            height:100%;
-            position: static;;
-        }
-        .services{
-            height:100%;
-            position: static;;
-            background:linear-gradient(white 26.7%,#07164e 26.7%);
-        }
-        .services .worksofar{
-            margin:2% 0%;
-        }
-        .services .worksofar .item{
-            width:100%;
-            margin-right:0%;
-            margin-bottom: 2%;
-            z-index: 2;
-            height:24vh;
-            font-size: 1.25em;
-            flex-direction: column;
-        }
-        .serv{
-            height:100%;
-            width:100%;
-            position:static;
-            top:0%;
-        }
-        .serv h4{
-            margin-top: 90vh;
-            font-size: 1.5em;
-        }
-        .serv h2{
-                font-size: 1.75em;
-                margin-bottom: 2vh;
-        }
-        .serv .servitems{
-                margin: 10% 13% 0 13%;
-                display:grid;
-                height:100%;
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 25% 25% 25% 25%;
-        }
-        .serv .servitems .servitem{
-                min-height: min-content;
-                width:85%;
-                margin-bottom: 10vh;
-                margin-right: 0;
-                float:none;
-                text-align: center;
-        }
-        .serv .servitems .servitem h3{
-                font-size: 1.25em;
-            } 
-        .serv .servitems .servitem p{
-            padding:10px;
-            font-size: 1em;
-        }
-        .projects{
-            height:100vh;
-            width:100%;
-            margin:0% 0%;
-            padding:0;
-            position: static;
-            left:0%;
-            border-radius: 0%;
-            background-image: none;
-            display: block;
-            background-image: url("assets/home_banner/img7.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            /*background-color: rgba(33, 55, 135, 0.4);*/
-            background-blend-mode: darken;
-        }
-        .projects .projectitems{
-            display:grid;
-            grid-template-rows: 50% 50%;
-            grid-template-columns: 100%;
-            height: 100%;
-            width: 100%;
-        }
-        .projects .projectitems .head h2{
-            margin:0;
-            font-size: 3em;
-        }
-        .projects .projectitems .projectContents{
-            min-height: 600px;
-            width:100%;
-            align-self: self-end;
-        }
-        .projects .projectitems .projectContents .projectul{
-            color: black;
-            padding:0;
-            position: static;
-            width:100%;
-            font-size: 1em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides{
-            background-color: white;
-            border-radius: 25px;
-            padding:4% 4%;
-            margin:0 13%;
-            font-size: 1.15em;
-        }
-        .projects .projectitems .projectContents .projectul .mySlides h3{
-            font-size: 1.5em;
-        }
-        .projects .projectitems .projectContents .prev,.projects .projectContents .next{
-            position: absolute;
-            top:47%;
-            height:40px;
-            width:40px;
-            background-color: #07164e;
-            padding:5px;
-        }
-        .projects .projectitems .projectContents .prev{
-            left:10%;
-        }
-        .projects .projectitems .projectContents .next{
-            right:10%;
-        }
-        .check{
-            margin-top:0%;
-            height:50px;
-            width:100%;
-            font-size: 1.5em;
-        }
-        .check p a:after{
-            bottom:0;
-            content:"";
-            display:block;
-            height:3px;
-            left:15%;
-            position:absolute;
-            background:white;
-            transition:width .3s ease 0s,left .3s ease 0s;
-            width:0;
-        }
-        .check p a:hover:after{
-            width:70%;
-            left:15%;
-        }
-        .check1 p a button{
-            padding:5px 20px;
-            font-size: 1em;
-        }
-        .check2{
-            margin-top:2% 3%;
-            height:150px;
-            width:100%;
-            text-align: center;
-            color:black;
-        }
-        .check2 p{
-            font-size: 1em;
-            margin:0 15%;
-        }
-        .check2 p button{
-            margin-top: 10px;
-            padding:3px 40px;
-            font-size:1em;
-            margin-left: 0;
-        }
-        #Errorpage{
-            padding:0;
-        }
-        #Errorpage h1{
-            font-size: 4em;
-        }
-        #Errorpage h3{
-            font-size: 3em;
-        }
-        .footer{
-            height:80vh;
-            width:100vw;
-            padding:0 10%;
-            grid-template-columns: 80%;
-        }
-        .footer .footercontents:first-child{
-            margin: 0 25%;
-        }
-        .footer .footercontents p{
-            font-size: 1.25em;
-        }      
-        .footer .footercontents .abt p{
-            font-size: 1.5em;
-        }
-        .footer .footercontents a{
-            font-size: 1.25em;
-        }
-        #Key_Projects {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-        }    
-        #Key_Projects .heading{
-            height:40vh;
-            font-size: 1.75em;
-        }
-        #Key_Projects .keyprojectscontents {
-            margin:5vh 13%;
-            grid-template-columns: 100%;
-        }    
-        #Key_Projects .keyprojectscontents .card {
-            width: 80%;
-            height:min-content;
-            box-shadow: 0px 0px 2px black;
-            margin-bottom: 5vh;
-        }  
-        #Key_Projects .keyprojectscontents .card:hover{
-            box-shadow: 0px 0px 4px black;
-        }  
-        #Key_Projects .keyprojectscontents .card img{
-            width: 100%;
-            height: 200px;
-        }    
-        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-            text-align: left;
-            padding:20px 20px;
-            margin: 0;
-        }
-        #Key_Projects .keyprojectscontents .card h3{
-            font-size: 1.5em;
-            margin:0;
-        }
-        #Key_Projects .keyprojectscontents .card p{
-            font-size: 1.25em;
-            padding-top:0;
-        }
-        #Client .clientheading{
-            height:40vh;                
-            font-size: 1.5em;
-        }
-        #Client .clientheading .head1 p{
-            font-size: 1.25em;
-        }
-        #Client .clientcontents{
-            width:100%;
-            height:110vh;
-            margin:2% 0%;
-            grid-template-columns: 10% 80% 10%;
-        }
-        #Client .clientcontents .clientul{
-            padding:0;
-            margin: 0;
-            display: block;
-            width:100%;
-        }
-        #Client .clientcontents .prev1,#Client .clientcontents .next1{
-            color: black;
-            z-index:100;
-            font-weight: bold;
-        }
-        #Client .clientcontents .clientul .clientSlides{
-            height:100%;
-            min-height: min-content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-            margin:0;
-            width: 80%;
-            height: min-content;
-            padding:10px 10px;
-            min-height: min-content;
-            box-shadow: 0 0 0px gray;
-            display: flex;
-            font-size: 1.25em;
-            border-bottom:3px solid black;
-            float:none;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:last-child{
-            border-bottom:0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent:hover{
-            box-shadow: 0;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent .clientname{
-            text-align: center;
-        }
-        #Careers .careerheading{
-            height:40vh;        
-            font-size: 1.5em;
-        }
-        #Careers .careerscontents {
-            margin: 0 13%;
-            height:110vh;
-        }
-        #Careers .careerscontents form{
-            width: 100%;
-        }    
-        #Careers .careerscontents form select{
-            font-size: 1em;
-            margin-top: 1vh;
-            padding:10px;
-            background-color: white;
-        } 
-        #Careers .careerscontents form input{
-            width: 94%;
-            margin-top: 1vh;
-            font-size: 1em;
-            padding:10px;
-        }      
-        #Careers .careerscontents form div {
-            padding-bottom: 5vh;
-        }    
-        #Careers .careerscontents form div label {
-            margin-bottom: 1vh;
-            font-size: 1.25em;
-        }    
-        #Careers .careerscontents form #submit {
-            text-align: center;
-        }    
-        #Careers .careerscontents form #submit button {
-            padding: 4% 10%;
-            background-color: transparent;
-            font-weight: 100;
-            font-size: 1em;
-            box-shadow: 2px 2px 1px black;
-        }    
-        #Careers .careerscontents form #submit button h4 {
-            margin: 0;
-        }    
-        #Contact .contactheading{
-            height:40vh;
-            font-size: 1.5em;
-        }
-        #Contact .contactcontents{
-            margin:2% 0% 2% 2%;
-            height:20vh;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            font-size: 1em;
-        }
-        #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 0 rgb(201, 196, 196);
-            color:black;
-            width: 90%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            height: 40%;
-            padding:5% 0%;
-            justify-items: center;
-            align-content: center;
-            justify-self: center;
-            align-self: center;
-            background-color: #07164e;
-            color: white;
-        }
-        .modal .modalcontent {
-            background-color: white;
-            height:50%;
-            width:50%;
-        }
-        .modal .modalcontent .modalitems{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal .modalcontent .modalitems form div {
-            padding-bottom: 2vh;
-            font-size: 1.25em;
-            color: black;
-        }
-        .modal .modalcontent .modalitems form .submitbutton button{
-            font-size: 0.75em;
-        }
-        .enquiry{
-            height:15vh;
-        }
-        .enquiry #enquiryclick{
-            padding:20px 40px;
-            font-size: 1.25em;
-        }
-    }
-    
-    @media (min-width:1024px) and (max-width:1439px) {
-        html,body{
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            overflow-x: hidden; 
-        }
-        .serv_proj{
-            height:300vh;
-            position:relative;
-        }
-        .services{
-            height:275vh;
-            position:relative;
-            background:linear-gradient( white 0.5%,#07164e 0.5%);
-            background-position-y: 7vh;
-            background-repeat: no-repeat;
-        }
-        .services .worksofar{
-            margin:0 5%;
-            height: 15vh;
-            width: 100%;
-        }
-        .services .worksofar .item{
-            width:20%;
-            margin-right:3.3%;
-            float: left;
-            z-index: 2;
-            height:15vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.4);
-            background-blend-mode: darken;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-       .serv{
-           height:100vh;
-           width:100%;
-           position:absolute;
-           top:12%;
-       }
-       .serv .servitems{
-            margin: 0 3%;
-            display:grid;
-            height:min-content;
-            grid-template-rows: 25% 25% 25% 25%;
-            grid-template-columns: 50% 50%;
-       }
-       .serv .servitems .servitem{
-            margin-bottom: 10vh;
-            min-height: min-content;
-            width:90%;
-            justify-content: center;
-            align-content: center;
-            margin-right: 2%;
-            float:left;
-            color: black;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            align-self: center;
-            justify-self: center;
-            transform-origin: bottom;
-            box-shadow: 0 0 5px black;
-            transition: all .2s ease-in;
-            transform-origin: center bottom;
-       }
-       .serv .servitems .servitem h3{
-            text-align: center;
-            padding:0 10px;
-        } 
-        .serv .servitems .servitem p{
-            padding:20px;
-            font-size: 0.75em;
-        }
-        .projects{
-            height:50vh;
-            width:90%;
-            margin:0% 5%;
-            text-align: center;
-            padding:0;
-            position: absolute;
-            top:83%;
-            left:0%;
-            border-radius: 25px;
-            background-image: url("assets/home_banner/img7.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(0, 0, 0, 0.5);
-            /*background-color: rgba(33, 55, 135, 0.4);*/
-            background-blend-mode: darken;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .footer{
-            height:58vh;
-            width:100vw;
-            background-color:#07164e;
-            padding:0 5%;
-            display: grid;
-            grid-template-columns: 30% 30% 30% 5%;
-        }
-        .footer .footercontents{
-            justify-content: center;
-            align-self: center;
-            justify-self: center;
-        }
-        #Key_Projects .keyprojectscontents {
-            margin:10vh 20%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }    
-        #Key_Projects .keyprojectscontents .card {
-            margin-bottom: 10vh;
-            background-color: white;
-            width: 90%;
-            text-align: center;
-            float: left;
-            color: black;
-            justify-self: center;
-            height:55vh;
-        }  
-        #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
-            text-align: left;
-            padding:20px 20px;
-            margin: 0;
-        }
-        #Client .clientcontents{
-            width:70%;
-            height:min-content;
-            margin:2% 15%;
-            display:grid;
-            grid-template-columns: 5% 90% 5%;
-            justify-items: center;
-            align-items: center;
-        }
-        #Client .clientcontents .clientul{
-            padding:0;
-            color:black;
-            margin: 0;
-        }
-        #Client .clientcontents .prev1,#Client .clientcontents .next1{
-            color: black;
-            box-shadow: 0;
-            border-radius: 100%;
-            outline: 0;
-            border: 0;
-            height: 20px;
-            width: 20px;
-            cursor: pointer;
-            z-index:100;
-        }
-        #Client .clientcontents .clientul .clientSlides{
-            display: flex;
-            height:100%;
-        }
-        #Client .clientcontents .clientul .clientSlides .clientSlidescontent{
-            margin:20px 20px;
-            padding:20px 20px;
-            min-height: 30vh;
-            background-color: white;
-            box-shadow: 0px 0px 10px gray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width:20vh;
-        }
-        #Contact .contactcontents{
-            margin:0 15%;
-            height:20vh;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        #Contact .contactcontents .contactitem{
-            box-shadow: 0 0 30px rgb(201, 196, 196);
-            color:black;
-            width: 90%;
-            display: grid;
-            grid-template-columns: 20% 80%;
-            height: 40%;
-            padding:5% 0%;
-            justify-items: center;
-            align-content: center;
-            justify-self: center;
-            align-self: end;
-            background-color: #07164e;
-            color: white;
-        }  
-        .modal .modalcontent {
-            background-color: white;
-            height:50%;
-            width:35%;
-        }
-        .modal .modalcontent .modalitems {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin:0;
-            margin-top:15%;
-        }
-        .modal .modalcontent .close {
-            float: right;
-            left: 2%;
-            cursor: pointer;
-            color: black;
-            font-weight: bold;
-            padding:5px 7px;
-            margin-right: 10px;
-            border-radius: 100%;
-        }
-        .modal .modalcontent .modalitems form div {
-            padding-bottom: 2vh;
-            font-size: 1.25em;
-            color: black;
-        }
-        .modal .modalcontent .modalitems form div input{
-            padding:6px;
-        }
-        .modal .modalcontent .modalitems form div textarea {
-            width:100%;
-        }
-        .modal .modalcontent .modalitems form .submitbutton {
-            text-align: center;
-            padding-top: 2vh;
-        }
-        .modal .modalcontent .modalitems form .submitbutton button {
-            text-align: center;
-            background-color: #4062da;
-            color: white;
-            font-weight: bold;
-            padding: 5%;
-            padding-left: 7%;
-            padding-right: 7%;
-            outline: none;
-            box-shadow: none;
-            border: none;
-            cursor: pointer;
-            width:100%;
-        }
-    }    
+<head>
+    <meta charset="utf-8">
+    <title>Epoch Zero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);}
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="navcontent">
+        </div>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a id="show">Home</a>
+        <a onclick="openPage('Home','topnav', 'HOME')" class="active" id="defaultOpen">HOME</a>
+        <a onclick="openPage('Key_Projects','topnav','KEY PROJECTS')">KEY PROJECTS</a>
+        <a onclick="openPage('Client','topnav','CLIENT TESTIMONIAL')">CLIENT TESTIMONIAL</a>
+        <a onclick="openPage('Careers','topnav','CAREERS')">CAREERS</a>
+        <a onclick="openPage('Contact','topnav','CONTACT US')">CONTACT US</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="assets/icons/menu.png">
+        </a>
+    </div>
+    <div class="tabnav" id="myTabnav">
+        <img src="assets/Logowhite.png" class="tablink" id="logo">
+        <img src="assets/logowhite1.png" class="tablink" id="logoname">
+        <a class="tablink" onclick="openPage('Home','tabnav','HOME')" id="defaultOpen">HOME</a>
+        <a class="tablink" onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">KEY PROJECTS</a>
+        <a class="tablink" onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">CLIENT TESTIMONIAL</a>
+        <a class="tablink" onclick="openPage('Careers','tabnav','CAREERS')">CAREERS</a>
+        <a class="tablink" onclick="openPage('Contact','tabnav','CONTACT US')">CONTACT US</a>
+    </div>
+
+
+    <div id="Home" class="tabcontent">
+        <div class="banner">
+            <div class="bannercontent">
+                <p id="home1">Software Solution Startup
+                </p>
+                <p id="home2">Seamless Connection - Round the Globe<br>Choice for a Lifetime
+                </p>
+                <div id="home3">
+                    <div class="animated-text">
+                        <div class="line">7+ Years of Experience</div>
+                        <div class="line">200+ Projects</div>
+                        <div class="line">100+ Clients</div>
+                        <div class="line">80+ Offshore Work Commitments</div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutcompany">
+                <h3>
+                    About the company
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <h3>
+                    Mission
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+                <h3>
+                    Vision
+                </h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+            <div class="aboutimage">
+                <img src="assets/home_banner/img3.jfif">
+            </div>
+        </div>
+        <div class="serv_proj">
+            <div class="services">
+                <div class="worksofar">
+                    <div class="item" id="item1">
+                        <p>7+ Years of Experience</p>   
+                    </div>
+                    <div class="item" id="item2">
+                        <p>200+ Projects</p>  
+                    </div>
+                    <div class="item" id="item3">
+                        <p>100+ Clients</p>
+                    </div>
+                    <div class="item" id="item4">
+                        <p>80+ Offshore Work Commitments</p>
+                    </div>
+                </div>
+                <div class="serv">
+                    <h4>WHO WE ARE</h4>
+                    <h2>We deal with the aspects of<br>professional IT Services</h2>
+                    <div class="servitems">
+                        <div class="servitem">
+                            <h3> Cloud Services</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>UI/UX Design</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>Web Development</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>Application Development</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+
+                        <div class="servitem">
+                            <h3>Maintenance and Support Services</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>Software Development</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>Digital Marketing</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                        <div class="servitem">
+                            <h3>E-commerce Development</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects">
+                <div class="projectitems">
+                    <div class="head">
+                        <h2>Our Projects</h2>
+                        <div class="check">
+                            <p><a onclick="openPage('Key_Projects','tabnav')">Check out our Latest Work</a></p>
+                        </div>
+                    </div>
+                    <div class="projectContents">
+                        <ul class="projectul">
+                            <li class="mySlides">
+                                <h3>Project One</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                            </li>
+                            <li class="mySlides">
+                                <h3>Project Two</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    </p>
+                            </li>
+                        </ul>
+                        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="check1">
+            <p><br><a onclick="openPage('Errorpage','tabnav','404')" target="_blank"><button>Read the musing of our TechHub Community</button></a></p>
+        </div>
+        <div class="check2">
+            <p> Are We Liked? Check out what our clients are sayings <button onclick="openPage('Client','none','CLIENT TESTIMONIAL')">Our Clients <span style="font-size: small;">&#10095;</span></button></p>
+        </div>
+        <div class="footer">
+             <div class="footercontents">
+                <div class="abt">
+                    <img src="assets/Logowhite.png">
+                    <p><span style="font-weight:bold">epoch</span> zero</p>
+                </div>  
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+             </div>
+             <div class="footercontents">
+                 <div class="footercontact"> 
+                    <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
+                 </div>
+                 <div class="footercontact">
+                    <img src="assets/icons/phone-16.png"><p>9595959595</p>
+                </div>
+             </div>
+             <div class="footercontents">
+                 <p>Quick Links</p>
+                 <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                 <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                 <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                 <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                 <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
+             </div>
+        </div>
+    </div>
+
+    <div id="Key_Projects" class="tabcontent">
+        <div class="heading">
+            <h2>OUR PROJECTS</h2>
+        </div>
+        <div class="keyprojectscontents">
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>ProjectOne</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>Project Two</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>Project - Three</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>ProjFour</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>P5</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>ProjectSix</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>Project7</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of zatype and scrambled it to make a type specimen book.
+                    </p>
+            </div>
+            <div class="card">
+                <img src="assets/home_banner/img4.jpeg">
+                <h3>ProjectEight</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footercontents">
+               <div class="abt">
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
+               </div>  
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="footercontents">
+                <div class="footercontact"> 
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
+                </div>
+                <div class="footercontact">
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
+               </div>
+            </div>
+            <div class="footercontents">
+                <p>Quick Links</p>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
+            </div>
+       </div>
+    </div>
+
+    <div id="Client" class="tabcontent">
+        <div class="clientheading">
+            <div class="head1">
+                <h2>OUR HAPPY CUSTOMERS</h2>
+                <p>You Are</p>
+                <p>The Center of Our Universe</p>
+            </div>
+        </div>
+        <div class="clientcontents">
+            <button class="prev1" onclick="plusSlides1(-1)">&#10094;</button>
+            <ul class="clientul">
+                <li class="clientSlides">
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name1,Company</p>
+                    </div>
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name2,Company</p>
+                    </div>
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name3,Company</p>
+                    </div>
+                </li>
+                <li class="clientSlides">
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name4,Company</p>
+                    </div>
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name5,Company</p>
+                    </div>
+                    <div class="clientSlidescontent">
+                        <p class="clientcomment"><span class="doublequotes">&#8220;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<span class="doublequotes">&#8221;</span></p>
+                        <p class="clientname">Name6,Company</p>
+                    </div>
+                </li>
+            </ul>
+            <button class="next1" onclick="plusSlides1(1)">&#10095;</button>    
+        </div>
+        <div class="footer">
+            <div class="footercontents">
+               <div class="abt">
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
+               </div>  
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="footercontents">
+                <div class="footercontact"> 
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
+                </div>
+                <div class="footercontact">
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
+               </div>
+            </div>
+            <div class="footercontents">
+                <p>Quick Links</p>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
+            </div>
+       </div>
+    </div>
+
+    <div id="Careers" class="tabcontent">
+        <div class="careerheading">
+            <div class="head2">
+                <h3>JOIN US</h3>
+            </div>
+        </div>
+        <div class="careerscontents">
+            <div class="form">
+                <form>
+                    <div>
+                        <label for="name">Full name<br></label>
+                        <input type="text" name="name" size="40px" required>
+                    </div>
+                    <div>
+                        <label for="position">Position applying for<br></label>
+                        <select name="position">
+                            <option value="desg1">Desg1</option>
+                            <option value="desg2">Desg2</option>
+                            <option value="desg3">Desg3</option>
+                            <option value="desg4">Desg4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">Email Id<br></label>
+                        <input type="email" name="email" size="40px" required>
+                    </div>
+                    <div>
+                        <label for="phone">Contact Number<br></label>
+                        <input type="text" name="phone" size="40px" required>
+                    </div>
+                    <div id="submit">
+                        <button type="submit" value="submit"><h4>Submit</h4></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footercontents">
+               <div class="abt">
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
+               </div>  
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="footercontents">
+                <div class="footercontact"> 
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
+                </div>
+                <div class="footercontact">
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
+               </div>
+            </div>
+            <div class="footercontents">
+                <p>Quick Links</p>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
+            </div>
+       </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <div class="contactheading">
+            <div class="head3">
+                <h3>CONTACT US</h3>
+            </div>
+        </div>
+        <div class="contactcontents">
+            <div class="contactitem">
+                <div class="contacticon">
+                    <img src="assets/icons/mail-16.png">
+                </div>
+                <div class="contactdetails">
+                    <h3>E-Mail</h3>
+                    <p>loremipsum@email.com</p>
+                </div>
+            </div>
+            <div class="contactitem">
+                <div class="contacticon">
+                    <img src="assets/icons/phone-16.png">
+                </div>
+                <div class="contactdetails">
+                    <h3>Phone</h3>
+                    <p>9595959595</p>
+                </div>
+            </div>
+        </div>
+        <div class="enquiry">
+            <button id="enquiryclick">Have some query?</button>
+        </div>
+        <div class="modal" id="query">
+            <div class="modalcontent">
+                <span class="close" id="closequery">x</span>
+                <br>
+                <div class="modalitems">
+                    <form>
+                        <div>
+                            <label for="name">Name<br></label>
+                            <input type="text" name="name" size="30px">
+                        </div>
+                        <div>
+                            <label for="email">Email<br></label>
+                            <input type="text" name="email" size="30px" required>
+                        </div>
+                        
+                        <div>
+                            <label for="querymessage">Message<br></label>
+                            <textarea required></textarea>
+                        </div>
+                        <div class="submitbutton">
+                            <button type="submit" value="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footercontents">
+               <div class="abt">
+                   <img src="assets/Logowhite.png">
+                   <p><span style="font-weight:bold">epoch</span> zero</p>
+               </div>  
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="footercontents">
+                <div class="footercontact"> 
+                   <img src="assets/icons/mail-16.png"><p>loremipsum@email.com</p>
+                </div>
+                <div class="footercontact">
+                   <img src="assets/icons/phone-16.png"><p>9595959595</p>
+               </div>
+            </div>
+            <div class="footercontents">
+                <p>Quick Links</p>
+                <a onclick="openPage('Home','tabnav','HOME')">>> Home</a><br>
+                <a onclick="openPage('Key_Projects','tabnav','KEY PROJECTS')">>> Key Projects</a><br>
+                <a onclick="openPage('Client','tabnav','CLIENT TESTIMONIAL')">>> Client Testimonials</a><br>
+                <a onclick="openPage('Careers','tabnav','CAREERS')">>> Careers</a><br>
+                <a onclick="openPage('Contact','tabnav','CONTACT US')">>> Contact Us</a><br>
+            </div>
+       </div>
+    </div>
+    <div id="Errorpage" class="tabcontent">
+        <h1>404</h1>
+        <h3>Page Not Found</h3>
+    </div>
+
+    <script src="script.js" async defer></script>
+</body>
+</html>
