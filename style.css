@@ -5,14 +5,13 @@
         margin: 0;
         padding: 0;
         width:100vw;
-        overflow-x: hidden;
     }    
     html,body
     {
         width: 100%;
         margin: 0px;
         padding: 0px;
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
     .nav{
         height:0px;
@@ -129,14 +128,12 @@
     #home1{
         font-size: 2em;
         height:45px;
-        animation: show 1s;
     }        
     #home2{
         font-size: 3em;
         font-weight: 500;
         margin-top:10px;
         height:180px;
-        animation: show 1s;
     }
     #home3{
         font-size: 1.5em;
@@ -157,15 +154,6 @@
     }    
     .line:first-child{
         animation: anim 12s infinite;
-    }
-    @keyframes show{
-        0%{
-            transform: translateY(20%);
-            transform-origin: left top;
-       }
-        100%{
-            transform: translateY(0%);
-        } 
     }
     @keyframes anim {
         0%{
@@ -501,6 +489,7 @@
         padding:0 15%;
         display: grid;
         grid-template-columns: 25% 25% 15%;
+        font-size: 1em;
     }
     .footer .footercontents{
         justify-content: center;
@@ -522,7 +511,7 @@
     .footer .footercontents .abt p{
         width:max-content;
         height: auto;
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
     .footer .footercontents img{
         margin-right: 15px;
@@ -869,7 +858,6 @@
     @media (max-width:424px) {
         html{
             width: 100vw;
-            overflow-x: hidden;
         }
         body{
             width: 100vw;
@@ -1127,10 +1115,13 @@
             grid-template-columns: 74%;
         }
         .footer .footercontents p{
-            font-size: 1em;
+            font-size: 0.75em;
         }      
         .footer .footercontents .abt p{
-            font-size: 1.25em;
+            font-size: 1em;
+        }
+        .footer .footercontents a{
+            font-size: 0.75em;
         }
         #Key_Projects {
             height: 100%;
@@ -1320,7 +1311,6 @@
     @media (min-width:425px) and (max-width:767px) {
         html{
             width: 100vw;
-            overflow-x: hidden;
         }
         body{
             width: 100vw;
@@ -1585,11 +1575,11 @@
         .footer .footercontents:first-child{
             margin: 0 25%;
         }
-        .footer .footercontents p{
-            font-size: 1em;
+        .footer .footercontents p,.footer .footercontents a{
+            font-size: 0.75em;
         }      
         .footer .footercontents .abt p{
-            font-size: 1.25em;
+            font-size: 1em;
         }
         #Key_Projects {
             height: 100%;
@@ -1783,7 +1773,6 @@
     @media (min-width:768px) and (max-width:1023px) {
         html{
             width: 100vw;
-            overflow-x: hidden;
         }
         body{
             width: 100vw;
@@ -2051,13 +2040,13 @@
             margin: 0 25%;
         }
         .footer .footercontents p{
-            font-size: 1.25em;
+            font-size: 1em;
         }      
         .footer .footercontents .abt p{
-            font-size: 1.5em;
+            font-size: 1.25em;
         }
         .footer .footercontents a{
-            font-size: 1.25em;
+            font-size: 1em;
         }
         #Key_Projects {
             height: 100%;
@@ -2251,13 +2240,6 @@
     }
     
     @media (min-width:1024px) and (max-width:1439px) {
-        html,body{
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            overflow-x: hidden; 
-        }
         .serv_proj{
             height:300vh;
             position:relative;
@@ -2358,6 +2340,9 @@
             justify-content: center;
             align-self: center;
             justify-self: center;
+        }
+        .footer .footercontents p,.footer .footercontents a{
+            font-size: 0.85em;
         }
         #Key_Projects .keyprojectscontents {
             margin:10vh 20%;
