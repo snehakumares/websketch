@@ -8,7 +8,8 @@
     }    
     html,body
     {
-        width: 100%;
+        height:100%;
+        width: 100vw;
         margin: 0px;
         padding: 0px;
         overflow-x: hidden;
@@ -665,14 +666,15 @@
     }
     #Careers .careerscontents {
         display: flex;
-        height:55vh;
+        height:min-content;
         justify-content: center;
         align-items: center;
         color:black;
     }
     #Careers .careerscontents form{
         width: 100%;
-    }    
+        margin:40% 0;
+    }   
     #Careers .careerscontents form select{
         width:100%;
         font-size: 1em;
@@ -728,13 +730,16 @@
         align-items: center;
         font-size: 2em;
     }
-    #Contact .contactcontents{
+    #Contact .contacttotalcontents{
+        height: min-content;
+    }
+    #Contact .contacttotalcontents .contactcontents{
         margin:0 30%;
         height:20vh;
         display: grid;
         grid-template-columns: 50% 50%;
     }
-    #Contact .contactcontents .contactitem{
+    #Contact .contacttotalcontents .contactcontents .contactitem{
         box-shadow: 0 0 30px rgb(201, 196, 196);
         color:black;
         width: 90%;
@@ -749,10 +754,10 @@
         background-color: #07164e;
         color: white;
     }
-    #Contact .contactcontents .contactitem .contacticon{
+    #Contact .contacttotalcontents .contactcontents .contactitem .contacticon{
         align-self: center;
     }
-    #Contact .contactcontents .contactitem .contactdetails{
+    #Contact .contacttotalcontents .contactcontents .contactitem .contactdetails{
         justify-self: self-start;
     }
     .modal {
@@ -1141,7 +1146,7 @@
         }    
         #Key_Projects .keyprojectscontents .card {
             width: 100%;
-            height:min-content;
+            height:90%;
             box-shadow: 0px 0px 2px black;
             margin-bottom: 5vh;
         }  
@@ -1221,7 +1226,7 @@
         }
         #Careers .careerscontents {
             margin: 0 13%;
-            height:110vh;
+            height:min-content;
         }
         #Careers .careerscontents form{
             width: 100%;
@@ -1262,7 +1267,7 @@
             height:40vh;
             font-size: 1.25em;
         }
-        #Contact .contactcontents{
+        #Contact .contacttotalcontents .contactcontents{
             margin:10% 0% 2% 0%;
             height:20vh;
             display: grid;
@@ -1270,7 +1275,7 @@
             grid-template-rows: 50% 50%;
             font-size: 0.75em;
         }
-        #Contact .contactcontents .contactitem{
+        #Contact .contacttotalcontents .contactcontents .contactitem{
             box-shadow: 0 0 0 rgb(201, 196, 196);
             color:black;
             width: 90%;
@@ -1599,7 +1604,7 @@
         }    
         #Key_Projects .keyprojectscontents .card {
             width: 100%;
-            height:min-content;
+            height:90%;
             box-shadow: 0px 0px 2px black;
             margin-bottom: 5vh;
         }  
@@ -1682,7 +1687,7 @@
         }
         #Careers .careerscontents {
             margin: 0 13%;
-            height:110vh;
+            height:min-content;
         }
         #Careers .careerscontents form{
             width: 100%;
@@ -1723,7 +1728,7 @@
             height:40vh;
             font-size: 1.25em;
         }
-        #Contact .contactcontents{
+        #Contact .contacttotalcontents .contactcontents{
             margin:10% 0% 2% 0%;
             height:20vh;
             display: grid;
@@ -1731,7 +1736,7 @@
             grid-template-rows: 50% 50%;
             font-size: 0.85em;
         }
-        #Contact .contactcontents .contactitem{
+        #Contact .contacttotalcontents .contactcontents .contactitem{
             box-shadow: 0 0 0 rgb(201, 196, 196);
             color:black;
             width: 90%;
@@ -2066,7 +2071,7 @@
         }    
         #Key_Projects .keyprojectscontents .card {
             width: 80%;
-            height:min-content;
+            height:90%;
             box-shadow: 0px 0px 2px black;
             margin-bottom: 5vh;
         }  
@@ -2149,7 +2154,7 @@
         }
         #Careers .careerscontents {
             margin: 0 13%;
-            height:110vh;
+            height:min-content;
         }
         #Careers .careerscontents form{
             width: 100%;
@@ -2190,14 +2195,14 @@
             height:40vh;
             font-size: 1.5em;
         }
-        #Contact .contactcontents{
+        #Contact .contacttotalcontents .contactcontents{
             margin:2% 0% 2% 2%;
             height:20vh;
             display: grid;
             grid-template-columns: 50% 50%;
             font-size: 1em;
         }
-        #Contact .contactcontents .contactitem{
+        #Contact .contacttotalcontents .contactcontents .contactitem{
             box-shadow: 0 0 0 rgb(201, 196, 196);
             color:black;
             width: 90%;
@@ -2357,7 +2362,7 @@
             float: left;
             color: black;
             justify-self: center;
-            height:55vh;
+            height:90%;
         }  
         #Key_Projects .keyprojectscontents .card h3,#Key_Projects .keyprojectscontents .card p{
             text-align: left;
@@ -2405,13 +2410,13 @@
             flex-direction: column;
             width:100%;
         }
-        #Contact .contactcontents{
+        #Contact .contacttotalcontents .contactcontents{
             margin:0 15%;
             height:20vh;
             display: grid;
             grid-template-columns: 50% 50%;
         }
-        #Contact .contactcontents .contactitem{
+        #Contact .contacttotalcontents .contactcontents .contactitem{
             box-shadow: 0 0 30px rgb(201, 196, 196);
             color:black;
             width: 90%;
@@ -2479,6 +2484,9 @@
         }
     }    
     @media(min-width:1440px) {
+        #Key_Projects .keyprojectscontents .card{
+            height:90%;
+        }
         #Client .clientcontents{
             height: min-content;
         }
