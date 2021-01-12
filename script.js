@@ -1,10 +1,11 @@
-
-
 window.onload = function(){
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    AOS.init({
+        once: true
+     });
 }
-
+window.addEventListener('load', AOS.refresh);
 function openPage(pageName, elmnt, name) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent;
@@ -27,8 +28,20 @@ function openPage(pageName, elmnt, name) {
     }
     show = document.getElementById("show");
     show.innerHTML = name;
+    callaos();
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+}
+
+function callaos(){
+    AOS.refresh();
+    AOS.refreshHard();
+    AOS.init({
+        once:false
+    });
+    AOS.init({
+        once:true
+    });
 }
 
 // Get the element with id="defaultOpen" and click on it
